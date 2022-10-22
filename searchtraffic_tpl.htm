@@ -1,0 +1,100 @@
+<div class="header">
+<h4 class="title">{TRFFLTR0}</h4>
+</div>
+<div class="content">
+<div class="col-md-12">
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{TRFFLTR0}
+</div>
+<div class="panel-body">
+<form name="form1" action="admin.php?cont=traffic_report" method="post"">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{TRFFLTR1}</td>
+<td class="b1"><input name="username" type="text" class="form-control input-sm" id="username5" size="32" maxlength="32"> <em>{TRFFLTR4}</em>
+</td>
+</tr>
+<tr>
+<td class="td1">{TRFFLTR2}</td>
+<td class="b1"><input name="framedip" type="text" class="form-control input-sm" id="framedip" maxlength="15" size="15">
+</td>
+</tr>
+<tr>
+<td class="td1">{TRFFLTR3}</td>
+<td class="b1"><input name="stationid" type="text" class="form-control input-sm" id="stationid" maxlength="17" size="17"> <em>{TRFFLTR5}</em>
+</td>
+</tr>
+<tr>
+<td class="td1">{TRFFLTR12}</td>
+<td class="b1"><select name="nasid" class="form-control input-sm" id="nasid"> {NASLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{TRFFLTR13}</td>
+<td class="b1"><select name="apid" class="form-control input-sm" id="apid"> {APLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{TRFFLTR7}</td>
+<td class="b1"><input name="enableint" type="checkbox" id="enableint" value="1" onClick="setInt()" {CHKENABLEINT}>
+</td>
+</tr>
+<tr>
+<td class="td1">{TRFFLTR9}</td>
+<td class="b1">
+<input name="filterfrom" type="text" class="tgl form-control input-sm" id="filterfrom" value="{FILTERFROM}" size="10" maxlength="10"> ({TRFFLTR11})
+</td>
+</tr>
+<tr>
+<td class="td1">{TRFFLTR10}</td>
+<td class="b1">
+<input name="filterto" type="text" class="tgl form-control input-sm" id="filterto" value="{FILTERTO}" size="10" maxlength="10"> ({TRFFLTR11})
+</td>
+</tr>
+</tbody>
+</table>
+<p align="center" class="normal">
+<input class="btn btn-sm btn-primary" type="submit" name="Submit" value="{TRFFLTR6}" {SEARCHSTATE}>
+<SCRIPT type=text/javascript><!--
+focusField("username");
+setInt();
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+function setInt()
+{
+var btn1 = document.form1.enableint.checked;
+if (btn1)
+{
+document.form1.filterfrom.disabled = false;
+document.form1.filterto.disabled = false;
+}
+else
+{
+document.form1.filterfrom.disabled = true;
+document.form1.filterto.disabled = true;
+}
+}
+//--> </SCRIPT>
+</p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$(function () {
+$('.tgl').datepicker();
+});
+</script>

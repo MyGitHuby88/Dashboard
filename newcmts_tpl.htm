@@ -1,0 +1,57 @@
+<div class="header">
+<h4 class="title">{NEWCMTS0}</h4>
+</div>
+<div class="content">
+<alert class="h4 text-danger">{ERROR}</alert>
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{NEWCMTS0}
+</div>
+<div class="panel-body">
+<form action="admin.php?cont=store_cmts" method="post" name="form1" id="form1">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {NEWCMTS1}</td>
+<td class="b1"><input name="name" type="text" class="form-control input-sm" id="fromip3" value="{NAME}" size="32" maxlength="32">
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {NEWCMTS2}</td>
+<td class="b1"><input name="ip" type="text" class="form-control input-sm" id="fromip22" value="{IP}" size="15" maxlength="15">
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {NEWCMTS3}</td>
+<td class="b1"><input name="community" type="text" class="form-control input-sm" id="community" value="{COMMUNITY}" size="32" maxlength="32">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWCMTS4}</td>
+<td class="b1"><input name="descr" type="text" class="form-control input-sm" id="descr" value="{DESCR}" size="80" maxlength="200">
+</td>
+</tr>
+</tbody>
+</table>
+<p align="center" class="normal"><font color="#FF0000">*</font> {NEWCMTS5}</p>
+<p align="center">
+<input class="btn btn-md btn-primary" type="submit" name="Submit" value="{NEWCMTS6}">
+<SCRIPT type=text/javascript><!--
+focusField("name");
+function focusField(name)
+{
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+//--> </SCRIPT>
+</p>
+</form>
+</div>
+</div>
+</div>
+</div>

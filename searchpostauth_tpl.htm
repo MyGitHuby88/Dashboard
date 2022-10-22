@@ -1,0 +1,48 @@
+<div class="header">
+<h4 class="title">{FNDPSAUTH0}</h4>
+</div>
+<div class="content">
+<div class="col-md-12">
+<center> <alert class="h4 text-danger">{ERROR}</alert> </center>
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+<div class="panel panel-primary">
+<div class="panel-heading" style="font-size: 16px">{FNDPSAUTH0}
+</div>
+<div class="panel-body">
+<form name="form1" action="admin.php?cont=list_postauth" method="post">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{FNDPSAUTH1}</td>
+<td class="b1"><input name="username" type="text" class="form-control input-sm" id="username" value="{USERNAME}" size="32" maxlength="32">
+</td>
+</tr>
+<tr>
+<td class="td1">{FNDPSAUTH2}</td>
+<td class="b1"><select name="nasid" class="form-control input-sm" id="nasid"> {NASLIST}
+</select>
+</td>
+</tr>
+</tbody>
+</table>
+<p align="center" class="normal">
+<input class="btn btn-sm btn-primary" type="submit" name="Submit" value="{FNDPSAUTH6}">
+<SCRIPT type=text/javascript><!--
+focusField("username");
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+//--> </SCRIPT>
+</p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>

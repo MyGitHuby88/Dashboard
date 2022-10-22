@@ -1,0 +1,47 @@
+<div class="header">
+<h4 class="title">{PRNINV0}</h4>
+</div>
+<div class="content">
+<center><alert class="h4 text-danger">{ERROR}</alert></center>
+<div class="col-md-12">
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+<div class="panel panel-primary ">
+<div class="panel-body">
+<form name="form1" action="admin.php?cont=confirm_batch_billing" method="post" onSubmit="return submitList()">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{PRNINV1}:</td>
+<td class="b1"><input name="from" type="text" class="normal" id="from" value="{FROM}" size="10" maxlength="10">
+</td>
+</tr>
+<tr>
+<td class="td1">{PRNINV2}:</td>
+<td class="b1"><input name="to" type="text" class="normal" id="to" value="{TO}" size="10" maxlength="10">
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p class="text-center">
+<input type="submit" name="Submit" value="{PRNINV3}">
+<SCRIPT LANGUAGE="JavaScript">
+focusField("from");
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+</SCRIPT>
+</p>
+</form>
+<br>
+</div>
+</div>
+</div>
+</div>
+</div>

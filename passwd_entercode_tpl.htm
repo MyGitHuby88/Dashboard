@@ -1,0 +1,51 @@
+<div class="header">
+<h4 class="title">{PASSWDGETSMS0}</h4>
+</div>
+<div class="content">
+<center><alert class="h4 text-danger">{ERROR}</alert></center>
+<div class="col-md-12">
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+<div class="panel panel-primary ">
+<div class="panel-body">
+<br>
+<form name="form1" action="passwd.php?cont=actpswsms" method="post">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1"><font color="#FF0000">*</font>
+{PASSWDGETSMS1}:</td>
+<td class="b1"><input class="form-control input-sm" name="actcode" type="text" class="normal" id="actcode" size="20" maxlength="20">
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p class="text-center">
+<font color="#FF0000">*</font>
+{PASSWDGETSMS2}<br>
+</p><br>
+<p class="text-center">
+<strong>{PASSWDGETSMS4}</strong>
+</p><br>
+<p class="text-center">
+<input class="btn btn-primary btn-md" name="submit" type="submit" id="submit" value="{PASSWDGETSMS3}">
+<SCRIPT type=text/javascript><!--
+focusField("actcode");
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+//--> </SCRIPT>
+</p>
+</form>
+<br>
+</div>
+</div>
+</div>
+</div>
+</div>

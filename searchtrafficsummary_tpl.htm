@@ -1,0 +1,64 @@
+<div class="header">
+<h4 class="title">{TRFSUMFLTR0}</h4>
+</div>
+<div class="content">
+<div class="col-md-12">
+<center> <alert class="h4 text-danger">{ERROR}</alert> </center>
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{TRFSUMFLTR0}
+</div>
+<div class="panel-body">
+<form name="form1" action="admin.php?cont=traffic_summary" method="post" onSubmit="return submitList()">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{TRFSUMFLTR1}</td>
+<td class="b1"><input name="fromdate" type="text" class="tgl form-control input-sm" id="fromdate" value="{FROMDATE}" size="10" maxlength="10"> ({TRFSUMFLTR4})
+</td>
+</tr>
+<tr>
+<td class="td1">{TRFSUMFLTR2}</td>
+<td class="b1"><input name="todate" type="text" class="tgl form-control input-sm" id="todate" value="{TODATE}" size="10" maxlength="10"> ({TRFSUMFLTR4})
+</td>
+</tr>
+<tr>
+<td class="td1">{TRFSUMFLTR5}</td>
+<td class="b1"><select name="nasid" class="form-control input-sm" id="nasid"> {NASLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{TRFSUMFLTR6}</td>
+<td class="b1"><select name="apid" class="form-control input-sm" id="apid"> {APLIST}
+</select>
+</td>
+</tr>
+</tbody>
+</table>
+<p align="center" class="normal"><br>
+<input class="btn btn-sm btn-primary" type="submit" name="Submit" value="{TRFSUMFLTR3}" {SEARCHSTATE}>
+<SCRIPT type=text/javascript><!--
+focusField("fromdate");
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+//--> </SCRIPT>
+</p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$(function () {
+$('.tgl').datepicker();
+});
+</script>

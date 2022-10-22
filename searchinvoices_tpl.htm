@@ -1,0 +1,198 @@
+<div class="header">
+<h4 class="title">{FNDINV0}</h4>
+</div>
+<div class="content">
+<alert class="h4 text-danger">{ERROR}</alert>
+<div class="col-md-12">
+<div class="col-md-10 col-md-offset-1">
+<div class="row">
+<form name="form1" action="admin.php?cont=list_invoices" method="post">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{FNDINV0}
+</div>
+<div class="panel-body">
+<div class="col-md-6 col-sm-6">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{FNDINV1}</td>
+<td class="b1"><input name="fromdate" type="text" class="tgl form-control input-sm" data-date-format="yyyy-mm-dd" id="fromdate" value="{FROMDATE}" size="10" maxlength="10"> ({FNDINV18})
+</td>
+</tr>
+<tr>
+<td class="td1">{FNDINV2}</td>
+<td class="b1"><input name="todate" type="text" class="tgl form-control input-sm" data-date-format="yyyy-mm-dd" id="todate" value="{TODATE}" size="10" maxlength="10"> ({FNDINV18})
+</td>
+</tr>
+<tr>
+<td class="td1">{FNDINV3}</td>
+<td class="b1"><input name="frominvnum" type="text" class="form-control input-sm" id="frominvnum" value="{FROMINVNUM}" size="20" maxlength="20">
+</td>
+</tr>
+<tr>
+<td class="td1">{FNDINV26}</td>
+<td class="b1"><input name="toinvnum" type="text" class="form-control input-sm" id="toinvnum" value="{TOINVNUM}" size="20" maxlength="20">
+</td>
+</tr>
+<tr>
+<td class="td1">{FNDINV16}</td>
+<td class="b1"><input name="gwtransid" type="text" class="form-control input-sm" id="gwtransid" value="{GWTRANSID}" size="20" maxlength="20">
+</td>
+</tr>
+<tr>
+<td class="td1">{FNDINV4}</td>
+<td class="b1"><input name="issuedby" type="text" class="form-control input-sm" id="issuedby" value="{ISSUEDBY}" size="20" maxlength="20">
+</td>
+</tr>
+<tr>
+<td class="td1">{FNDINV5}</td>
+<td class="b1"><input name="issuedfor" type="text" class="form-control input-sm" id="issuedfor" value="{ISSUEDFOR}" size="20" maxlength="20">
+</td>
+</tr>
+<tr>
+<td class="td1">{FNDINV34}</td>
+<td class="b1"><input name="accowner" type="text" class="form-control input-sm" id="accowner" value="{ACCOWNER}" size="20" maxlength="20">
+</td>
+</tr>
+<tr>
+<td class="td1">{FNDINV17}</td>
+<td class="b1"><input name="comment" type="text" class="form-control input-sm" id="comment" value="{COMMENT}" size="50" maxlength="100">
+</td>
+</tr>
+<tr>
+<td class="td1">{FNDINV27}</td>
+<td class="b1"><input name="trtype" type="radio" value="0" {CHKTRTYPEUSR}>
+{FNDINV8}<br>
+<input type="radio" name="trtype" value="1" {CHKTRTYPEMAN}>
+{FNDINV20}
+</td>
+</tr>
+<tr>
+<td class="td1">{FNDINV30}</td>
+<td class="b1"><input name="pmstatus" type="radio" value="-1" {CHKPMSTATUS0}>
+{FNDINV31}<br>
+<input type="radio" name="pmstatus" value="1" {CHKPMSTATUS1}>
+{FNDINV32} <br>
+<input type="radio" name="pmstatus" value="2" {CHKPMSTATUS2}>
+{FNDINV33}
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-md-6 col-sm-6">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{FNDINV19}</td>
+<td class="b1"><input name="invgroup[]" type="checkbox" id="invgroup[]" value="0" {CHKTRUSR}>
+{FNDINV21}<br>
+<input name="invgroup[]" type="checkbox" id="invgroup[]" value="1" {CHKTRMAN}>
+{FNDINV22}
+</td>
+</tr>
+<tr>
+<td class="td1">{FNDINV6}</td>
+<td class="b1">
+<input name="paymode[]" type="checkbox" id="paymode[]" value="0" {CHKPM0}>
+{FNDINV9} <br>
+<input name="paymode[]" type="checkbox" id="paymode[]" value="1" {CHKPM1}>
+{FNDINV10}<br>
+<input name="paymode[]" type="checkbox" id="paymode[]" value="2" {CHKPM2}>
+{FNDINV11}<br>
+<input name="paymode[]" type="checkbox" id="paymode[]" value="3" {CHKPM3}>
+{FNDINV12}<br>
+<input name="paymode[]" type="checkbox" id="paymode[]" value="4" {CHKPM4}>
+{FNDINV23}<br>
+<input name="paymode[]" type="checkbox" id="paymode[]" value="5" {CHKPM5}>
+{FNDINV14}<br>
+<input name="paymode[]" type="checkbox" id="paymode[]" value="6" {CHKPM6}>
+{FNDINV15}<br>
+<input name="paymode[]" type="checkbox" id="paymode[]" value="7" {CHKPM7}>
+{FNDINV24}<br>
+<input name="paymode[]" type="checkbox" id="paymode[]" value="8" {CHKPM8}>
+{FNDINV25}<br>
+<input name="paymode[]" type="checkbox" id="paymode[]" value="9" {CHKPM9}>
+{FNDINV28}<br>
+<input name="paymode[]" type="checkbox" id="paymode[]" value="10" {CHKPM10}>
+{FNDINV29}<br>
+<input name="paymode[]" type="checkbox" id="paymode[]" value="11" {CHKPM11}>
+{FNDINV35}
+</td>
+</tr>
+</tbody>
+</table>
+<p class="text-left"><br><br>
+<input class="btn btn-md btn-primary" type="submit" name="Submit" value="{FNDINV7}">
+<script language="JavaScript" type="text/JavaScript">
+focusField("fromdate");
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+function submitInvoice()
+{
+var year1 = document.form1.year1.options[document.form1.year1.selectedIndex].text;
+var month1 = document.form1.month1.selectedIndex + 1;
+month1 = month1 + '';
+if (month1.length == 1)
+month1 = "0" + month1;
+var day1 = document.form1.day1.selectedIndex;
+day1 = day1 + '';
+if (day1.length == 1)
+day1 = "0" + day1;
+document.form1.fromdate.value = year1 + "-" + month1 + "-" + day1;
+var year2 = document.form1.year2.options[document.form1.year2.selectedIndex].text;
+var month2 = document.form1.month2.selectedIndex + 1;
+month2 = month2 + '';
+if (month2.length == 1)
+month2 = "0" + month2;
+var day2 = document.form1.day2.selectedIndex;
+day2 = day2 + '';
+if (day2.length == 1)
+day2 = "0" + day2;
+document.form1.todate.value = year2 + "-" + month2 + "-" + day2;
+}
+function submitList()
+{
+var year1 = document.form1.year1.options[document.form1.year1.selectedIndex].text;
+var month1 = document.form1.month1.selectedIndex + 1;
+month1 = month1 + '';
+if (month1.length == 1)
+month1 = "0" + month1;
+var day1 = document.form1.day1.selectedIndex + 1;
+day1 = day1 + '';
+if (day1.length == 1)
+day1 = "0" + day1;
+document.form1.fromdate.value = year1 + "-" + month1 + "-" + day1;
+var year2 = document.form1.year2.options[document.form1.year2.selectedIndex].text;
+var month2 = document.form1.month2.selectedIndex + 1;
+month2 = month2 + '';
+if (month2.length == 1)
+month2 = "0" + month2;
+var day2 = document.form1.day2.selectedIndex + 1;
+day2 = day2 + '';
+if (day2.length == 1)
+day2 = "0" + day2;
+document.form1.todate.value = year2 + "-" + month2 + "-" + day2;
+}
+</script>
+</p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$(function () {
+$('.tgl').datepicker();
+});
+</script>

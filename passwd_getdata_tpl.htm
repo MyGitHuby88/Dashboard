@@ -1,0 +1,81 @@
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+<p class="text-center" style="margin-top: 7%; margin-bottom: 7%;"><img src="assets/img/logo.png"></p>
+<center><alert class="h4 text-danger">{ERROR}</alert></center>
+<form name="form1" action="passwd.php?cont=sendpsw" method="post" >
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{PASSWDREC0}
+</div>
+<div class="panel-body">
+<table class="table table-condensed">
+<tbody>
+<tr>
+<td class="td1">{PASSWDREC8}:</td>
+<td class="b1"><select name="lang" class="normal" id="lang" onChange="change_lang()">
+{LANGLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {PASSWDREC9}:</td>
+<td class="b1"><input name="username" type="text" class="form-control input-md" id="username" value="{USERNAME}" size="32" maxlength="32">
+</td>
+</tr>
+<tr>
+<td class="td1">{PASSWDREC1}:</td>
+<td class="b1"><input name="mode" type="radio" value="0" {CHKEMAIL}>
+{PASSWDREC2} <br> <input type="radio" name="mode" value="1" {CHKSMS}>
+{PASSWDREC3}
+</td>
+</tr>
+<tr>
+<td class="td1">{PASSWDREC4}:</td>
+<td class="b1"><input name="email" type="text" class="form-control input-md" id="email" value="{EMAIL}" size="40" maxlength="50">
+</td>
+</tr>
+<tr>
+<td class="td1">{PASSWDREC5}:</td>
+<td class="b1"><input name="mobile" type="text" class="form-control input-md" id="mobile" value="{MOBILE}" size="15" maxlength="15">
+({PASSWDREC6})
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p align="center" class="normal"><font color="#FF0000">*</font>
+{PASSWDREC10} </p>
+<p align="center" class="normal">
+<input class="btn btn-md btn-primary" type="submit" name="Submit" value="{PASSWDREC7}">
+<script language="JavaScript" type="text/JavaScript">
+focusField("username");
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+</script>
+<script language="JavaScript" type="text/JavaScript">
+function change_lang()
+{
+len = document.form1.lang.length;
+for (i = 0; i < len; i++)
+{
+if (document.form1.lang[i].selected)
+lang = document.form1.lang[i].text;
+}
+window.location="passwd.php?cont=change_lang&lang=" + lang;
+}
+</script>
+</p>
+</form>
+</div>
+</div>
+<p class="text-center"><a href="user.php"> <<<<<  </a></p>
+</div>
+</div>
+</div>

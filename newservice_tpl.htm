@@ -1,0 +1,535 @@
+<div class="header">
+<h4 class="title">{NEWSRV0}</h4>
+</div>
+<div class="content">
+<alert class="h4 text-danger">{ERROR}</alert>
+<div class="col-md-12">
+<div class="row">
+<form action="admin.php?cont=store_service" method="post" enctype="multipart/form-data" name="form1">
+<div class="col-md-6">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{NEWSRV1}
+</div>
+<div class="panel-body">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span>{NEWSRV2}</td>
+<td class="b1"><input name="srvname" type="text" class="form-control input-sm" id="profname2" value="{SRVNAME}" maxlength="50" size="50">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV93}</td>
+<td class="b1"><input name="descr" type="text" class="form-control input-sm" id="descr" value="{DESCR}" maxlength="50" size="50">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV3}</td>
+<td class="b1"><input name="enableservice" type="checkbox" id="enableservice" value="1" {CHECKEDENSERVICE}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV69}</td>
+<td class="b1"><input name="availucp" type="checkbox" id="availucp" value="1" {CHECKEDAVAILUCP}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV4}</td>
+<td class="b1">                                  <input type="radio" name="srvtype" value="0" {CHECKEDPREPAIDREG}>
+{NEWSRV5}<br>
+<input type="radio" name="srvtype" value="1" {CHECKEDPREPAIDCARD}>
+{NEWSRV6}<br>
+<input type="radio" name="srvtype" value="2" {CHECKEDPOSTPAID}>
+{NEWSRV7}<br>
+<input type="radio" name="srvtype" value="3" {CHECKEDEMAIL}>
+{NEWSRV8}<br>
+<input type="radio" name="srvtype" value="4" {CHECKEDACL}>
+{NEWSRV62}
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV9}</td>
+<td class="b1"><input name="limitdl" type="checkbox" id="limitdl" value="1" {CHECKEDLIMITDL}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV10}</td>
+<td class="b1"><input name="limitul" type="checkbox" id="limitul" value="1" {CHECKEDLIMITUL}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV63}</td>
+<td class="b1"><input name="limitcomb" type="checkbox" id="limitcomb" value="1" onClick="setLimitComb()" {CHECKEDLIMITCOMB}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV12}</td>
+<td class="b1"><input name="limitexp" type="checkbox" id="limitexp" value="1" {CHECKEDLIMITEXP}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV13}</td>
+<td class="b1"><input name="limituptime" type="checkbox" id="limituptime" value="1" {CHECKEDLIMITUPTIME}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV18}</td>
+<td class="b1"><input name="downrate" type="text" class="normal" id="downrate" value="{DOWNRATE}" maxlength="11" size="11">
+/
+<input name="uprate" type="text" class="normal" id="uprate" value="{UPRATE}" maxlength="11" size="11">
+{NEWSRV29} <font color="#666666"><em>{NEWSRV30}</em></font>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV73}<br><em><font color="#666666">{NEWSRV75}</font></em></td>
+<td class="b1"><input name="policymapdl" type="text" class="form-control input-sm" id="policymapdl" value="{POLICYMAPDL}" maxlength="50" size="50">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV74}<br><em><font color="#666666">{NEWSRV75}</font></em></td>
+<td class="b1"><input name="policymapul" type="text" class="form-control input-sm" id="policymapul" value="{POLICYMAPUL}" maxlength="50" size="50">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV15}</td>
+<td class="b1"><input name="dlquota" type="text" class="form-control input-sm" id="dlquota" value="{DLQUOTA}" maxlength="25" size="20">
+{NEWSRV24} <em><font color="#666666">{NEWSRV25}</font></em>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV16}</td>
+<td class="b1"><input name="ulquota" type="text" class="form-control input-sm" id="ulquota" value="{ULQUOTA}" maxlength="25" size="20">
+{NEWSRV24}<em><font color="#666666"> {NEWSRV26}</font></em>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV64}</td>
+<td class="b1"><input name="combquota" type="text" class="form-control input-sm" id="combquota" value="{COMBQUOTA}" maxlength="25" size="20">
+{NEWSRV24} <em><font color="#666666">{NEWSRV65}</font></em>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV17}</td>
+<td class="b1"><input name="timequota" type="text" class="form-control input-sm" id="timequota" value="{TIMEQUOTA}" maxlength="25" size="20">
+{NEWSRV27} <em><font color="#666666">{NEWSRV28}</font></em>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV19}</td>
+<td class="b1"><input name="enableburst" type="checkbox" id="enableburst" value="1" {CHECKEDENBURST} onClick="setBurst()">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV20}</td>
+<td class="b1"><input name="dlburstlimit" type="text" class="normal" id="dlburstlimit2" value="{DLBURSTLIMIT}" maxlength="11" size="11">
+/
+<input name="ulburstlimit" type="text" class="normal" id="ulburstlimit" value="{ULBURSTLIMIT}" maxlength="11" size="11">
+{NEWSRV29}
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV21}</td>
+<td class="b1"><input name="dlburstthreshold" type="text" class="normal" id="dlburstthreshold" value="{DLBURSTTHRESHOLD}" maxlength="11" size="11">
+/
+<input name="ulburstthreshold" type="text" class="normal" id="ulburstthreshold" value="{ULBURSTTHRESHOLD}" maxlength="11" size="11">
+{NEWSRV29}
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV22}</td>
+<td class="b1"><input name="dlbursttime" type="text" class="normal" id="dlbursttime" value="{DLBURSTTIME}" maxlength="11" size="11">
+/
+<input name="ulbursttime" type="text" class="normal" id="ulbursttime" value="{ULBURSTTIME}" maxlength="11" size="11">
+{NEWSRV31}
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV61}</td>
+<td class="b1"><input name="priority" type="text" class="normal" id="priority" value="{PRIORITY}" maxlength="11" size="11">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV23}</td>
+<td class="b1"><input name="poolname" type="text" class="form-control input-sm" id="profname" value="{POOLNAME}" maxlength="50" size="50">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV94}</td>
+<td class="b1"><select name="disnextsrvid" class="form-control input-sm" id="disnextsrvid">
+{DISNEXTSRVLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV68}</td>
+<td class="b1"><select name="nextsrvid" class="form-control input-sm" id="nextsrvid">
+{NEXTSRVLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV83}</td>
+<td class="b1"><select name="dailynextsrvid" class="form-control input-sm" id="dailynextsrvid">
+{DAILYNEXTSRVLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV92}</td>
+<td class="b1"><input name="ignstatip" type="checkbox" id="ignstatip" value="1" {CHKIGNSTATIP}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV85}</td>
+<td class="b1"><textarea name="custattr" cols="50" rows="5" class="form-control input-sm" id="custattr">{CUSTATTR}</textarea>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV87}</td>
+<td class="b1"><input name="gentftp" type="checkbox" id="gentftp" value="1" {CHKGENTFTP}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV88}</td>
+<td class="b1"><input name="advcmcfg" type="checkbox" id="advcmcfg" value="1" onClick="showCMcfg()" {CHKADVCMCFG}>
+</td>
+</tr>
+<tr>
+<td class="td1"> </td>
+<td class="b1"><textarea name="cmcfg" cols="50" rows="5" class="form-control input-sm" id="cmcfg">{CMCFG}</textarea>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 100%">
+<tr>
+<td class="text-center" style="width: 50%">{NEWSRV80}
+<br>
+<a name="naslist"></a>
+<select name="allowednases[]" size="15" multiple id="allowednases[]">{NASLIST}
+</select>
+<br>
+<p > [<a href="#naslist" onclick="listbox_selectall('allowednases[]', true)">{NEWSRV81}</a>]
+[<a href="#naslist" onclick="listbox_selectall('allowednases[]', false)">{NEWSRV82}</a>]
+<script language="JavaScript" src="helper.js" type="text/JavaScript"></script>
+</p>
+</td>
+<td class="text-center" style="width: 50%">
+{NEWSRV84}<br>
+<a name="managerslist"></a>
+<select name="allowedmanagers[]" size="15" multiple id="allowedmanagers[]">{MANAGERLIST}
+</select>
+<br>
+[<a href="#naslist" onclick="listbox_selectall('allowedmanagers[]', true)">{NEWSRV81}</a>]
+[<a href="#naslist" onclick="listbox_selectall('allowedmanagers[]', false)">{NEWSRV82}</a>]
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{NEWSRV32}
+</div>
+<div class="panel-body">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{NEWSRV33}</td>
+<td class="b1"><p>
+<input name="pricecalcdownload" type="checkbox" id="pricecalcdownload" value="1" {CHECKEDPCALCDL}>
+{NEWSRV34}<br>
+<input name="pricecalcupload" type="checkbox" id="pricecalcupload" value="1" {CHECKEDPCALCUL}>
+{NEWSRV35}<br>
+<input name="pricecalcuptime" type="checkbox" id="pricecalcuptime" value="1" {CHECKEDPCALCUPTIME}>
+{NEWSRV36}<br>
+</p>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV37}</td>
+<td class="b1"><input name="monthly" type="checkbox" id="monthly" value="1" {CHECKEDMONTHLY}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV70}</td>
+<td class="b1"><input name="renew" type="checkbox" id="renew" value="1" {CHECKEDRENEW}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV90}</td>
+<td class="b1"><input name="carryover" type="checkbox" id="carryover" value="1" {CHKCARRYOVER}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV38}</td>
+<td class="b1"><input name="resetcounters" type="checkbox" id="resetcounters" value="1" {CHECKEDRESETCOUNTERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV39}</td>
+<td class="b1"><input name="enaddcredits" type="checkbox" id="enaddcredits2" value="1" {CHECKEDENADDCREDITS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV41} ({CURRENCY})</td>
+<td class="b1"><input name="unitprice" type="text" class="normal" id="unitprice" value="{UNITPRICE}" maxlength="25" size="25" onChange="calcNetPrice1()">
+<input name="taxpercent" type="hidden" id="taxpercent" value="{TAXPERCENT}">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV42} ({CURRENCY})</td>
+<td class="b1"><input name="unitpricegross" type="text" class="normal" id="unitpricegross" maxlength="25" size="25" onChange="calcGrossPrice1()">
+<br>{NEWSRV45}:
+<input name="unitpricetax" type="text" class="inputreadonly" id="unitpricetax" value="{UNITPRICETAX}" size="20" readonly>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV43} ({CURRENCY})</td>
+<td class="b1"><input name="unitpriceadd" type="text" class="normal" id="unitpriceadd" value="{UNITPRICEADD}" maxlength="25" size="25" onChange="calcNetPrice2()">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV44} ({CURRENCY})</td>
+<td class="b1"><input name="unitpriceaddgross" type="text" class="normal" id="unitpriceaddgross" maxlength="25" size="25" onChange="calcGrossPrice2()">
+<br>{NEWSRV45}:
+<input name="unitpriceaddtax" type="text" class="inputreadonly" id="unitpriceaddtax" value="{UNITPRICEADDTAX}" size="20" readonly>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV46}</td>
+<td class="b1"><input name="timeaddmodeexp" type="radio" value="0" {CHECKEDRESETTIMEEXP}>
+{NEWSRV47}<br> <input type="radio" name="timeaddmodeexp" value="1" {CHECKEDPROLONGTIMEEXP}>
+{NEWSRV48}<br> <input type="radio" name="timeaddmodeexp" value="2" {CHECKEDPROLONGTIMEEXPFIX}>
+{NEWSRV86}
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV77}</td>
+<td class="b1"><input name="timeaddmodeonline" type="radio" value="0" {CHECKEDRESETTIMEONLINE}>
+{NEWSRV78}<br> <input type="radio" name="timeaddmodeonline" value="1" {CHECKEDPROLONGTIMEONLINE}>
+{NEWSRV79}
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV49}</td>
+<td class="b1"><input name="trafficaddmode" type="radio" value="0" {CHECKEDRESETTRAFFIC}>
+{NEWSRV50}<br> <input type="radio" name="trafficaddmode" value="1" {CHECKEDADDITIVETRAFFIC}>
+{NEWSRV51}
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV52}</td>
+<td class="b1"><input name="timeunitexp" type="text" class="normal" id="timeunitexp" value="{TIMEUNITEXP}" maxlength="25" size="4">
+{NEWSRV72}:
+<input name="inittimeexp" type="text" class="normal" id="inittimeexp" value="{INITTIMEEXP}" maxlength="25" size="9">
+<select name="timebaseexp" class="normal" id="timebaseexp">
+{TIMEBASELISTEXP}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV76}</td>
+<td class="b1"><input name="timeunitonline" type="text" class="normal" id="timeunitonline" value="{TIMEUNITONLINE}" maxlength="25" size="4">
+{NEWSRV72}:
+<input name="inittimeonline" type="text" class="normal" id="inittimeonline" value="{INITTIMEONLINE}" maxlength="25" size="9">
+<select name="timebaseonline" class="normal" id="timebaseonline">
+{TIMEBASELISTONLINE}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV53}</td>
+<td class="b1"><input name="trafficunitdl" type="text" class="normal" id="trafficunitdl" value="{TRAFFICUNITDL}" maxlength="25" size="4">
+{NEWSRV72}:
+<input name="initdl" type="text" class="normal" id="trafficunitdl3" value="{INITDL}" maxlength="25" size="12">
+{NEWSRV57}
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV66}</td>
+<td class="b1"><input name="trafficunitul" type="text" class="normal" id="trafficunitul" value="{TRAFFICUNITUL}" maxlength="25" size="4">
+{NEWSRV72}:
+<input name="initul" type="text" class="normal" id="initul" value="{INITUL}" maxlength="25" size="12">
+{NEWSRV57}
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV67}</td>
+<td class="b1"><input name="trafficunitcomb" type="text" class="normal" id="trafficunitcomb" value="{TRAFFICUNITCOMB}" maxlength="25" size="4">
+{NEWSRV72}:
+<input name="inittotal" type="text" class="normal" id="inittotal" value="{INITTOTAL}" maxlength="25" size="12">
+{NEWSRV57}
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV54}</td>
+<td class="b1"><input name="minamount" type="text" class="normal" id="minamount" value="{MINAMOUNT}" maxlength="25" size="15">
+{NEWSRV58}
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV91}</td>
+<td class="b1"><input name="addamount" type="text" class="normal" id="addamount" value="{ADDAMOUNT}" maxlength="25" size="15">
+{NEWSRV57}
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWSRV71}</td>
+<td class="b1"><input name="minamountadd" type="text" class="normal" id="minamountadd" value="{MINAMOUNTADD}" maxlength="25" size="15">
+{NEWSRV58}
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p align="center" class="normal"> <font color="#FF0000">*</font>
+{NEWSRV59}</p>
+<p align="center" class="normal">
+<input class="btn btn-md btn-primary" name="Submit" type="submit" id="Submit" value="{NEWSRV60}">
+<SCRIPT type=text/javascript>
+focusField("srvname");
+setBurst();
+setLimitComb();
+showCMcfg();
+var unitpricegross = parseFloat(document.form1.unitprice.value) + parseFloat(document.form1.unitpricetax.value);
+document.form1.unitpricegross.value = unitpricegross.toFixed(6);
+var unitpriceaddgross = parseFloat(document.form1.unitpriceadd.value) + parseFloat(document.form1.unitpriceaddtax.value);
+document.form1.unitpriceaddgross.value = unitpriceaddgross.toFixed(6);
+function showCMcfg()
+{
+if (form1.advcmcfg.checked)
+{
+form1.cmcfg.style.height="200px";
+form1.cmcfg.style.visibility="visible";
+}
+else
+{
+form1.cmcfg.style.height="1px";
+form1.cmcfg.style.visibility="hidden";
+}
+}
+function focusField(name)
+{
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+function calcNetPrice1()
+{
+if (document.form1.unitprice.value == "")
+document.form1.unitprice.value = 0;
+document.form1.unitprice.value = parseFloat(document.form1.unitprice.value).toFixed(6);
+var taxmultiplier = (100 + parseFloat(document.form1.taxpercent.value)) / 100;
+var unitpricegross = document.form1.unitprice.value * taxmultiplier;
+document.form1.unitpricegross.value = unitpricegross.toFixed(6);
+var unitpricetax = unitpricegross - document.form1.unitprice.value;
+document.form1.unitpricetax.value = unitpricetax.toFixed(6);
+}
+function calcGrossPrice1()
+{
+if (document.form1.unitpricegross.value == "")
+document.form1.unitpricegross.value = 0;
+document.form1.unitpricegross.value = parseFloat(document.form1.unitpricegross.value).toFixed(6);
+var taxmultiplier = (100 + parseFloat(document.form1.taxpercent.value)) / 100;
+var unitprice = document.form1.unitpricegross.value / taxmultiplier;
+document.form1.unitprice.value = unitprice.toFixed(6);
+var unitpricetax = document.form1.unitpricegross.value - unitprice;
+document.form1.unitpricetax.value = unitpricetax.toFixed(6);
+}
+function calcNetPrice2()
+{
+if (document.form1.unitpriceadd.value == "")
+document.form1.unitpriceadd.value = 0;
+document.form1.unitpriceadd.value = parseFloat(document.form1.unitpriceadd.value).toFixed(6);
+var taxmultiplier = (100 + parseFloat(document.form1.taxpercent.value)) / 100;
+var unitpriceaddgross = document.form1.unitpriceadd.value * taxmultiplier;
+document.form1.unitpriceaddgross.value = unitpriceaddgross.toFixed(6);
+var unitpriceaddtax = unitpriceaddgross - document.form1.unitpriceadd.value;
+document.form1.unitpriceaddtax.value = unitpriceaddtax.toFixed(6);
+}
+function calcGrossPrice2()
+{
+if (document.form1.unitpriceaddgross.value == "")
+document.form1.unitpriceaddgross.value = 0;
+document.form1.unitpriceaddgross.value = parseFloat(document.form1.unitpriceaddgross.value).toFixed(6);
+var taxmultiplier = (100 + parseFloat(document.form1.taxpercent.value)) / 100;
+var unitpriceadd = document.form1.unitpriceaddgross.value / taxmultiplier;
+document.form1.unitpriceadd.value = unitpriceadd.toFixed(6);
+var unitpriceaddtax = document.form1.unitpriceaddgross.value - unitpriceadd;
+document.form1.unitpriceaddtax.value = unitpriceaddtax.toFixed(6);
+}
+function calcTaxRate()
+{
+if (document.form1.taxpercent.value == "")
+document.form1.taxpercent.value = 0;
+calcGrossPrice1();
+calcGrossPrice2();
+}
+function setBurst()
+{
+var btn1 = document.form1.enableburst.checked;
+if (btn1)
+{
+document.form1.dlburstlimit.style.color = '#000000'
+document.form1.dlburstlimit.readOnly = false;
+document.form1.ulburstlimit.style.color = '#000000'
+document.form1.ulburstlimit.readOnly = false;
+document.form1.dlburstthreshold.style.color = '#000000'
+document.form1.dlburstthreshold.readOnly = false;
+document.form1.ulburstthreshold.style.color = '#000000'
+document.form1.ulburstthreshold.readOnly = false;
+document.form1.ulbursttime.style.color = '#000000'
+document.form1.ulbursttime.readOnly = false;
+document.form1.dlbursttime.style.color = '#000000'
+document.form1.dlbursttime.readOnly = false;
+document.form1.priority.style.color = '#000000'
+document.form1.priority.readOnly = false;
+}
+else
+{
+document.form1.dlburstlimit.style.color = '#999999'
+document.form1.dlburstlimit.readOnly = true;
+document.form1.ulburstlimit.style.color = '#999999'
+document.form1.ulburstlimit.readOnly = true;
+document.form1.dlburstthreshold.style.color = '#999999'
+document.form1.dlburstthreshold.readOnly = true;
+document.form1.ulburstthreshold.style.color = '#999999'
+document.form1.ulburstthreshold.readOnly = true;
+document.form1.ulbursttime.style.color = '#999999'
+document.form1.ulbursttime.readOnly = true;
+document.form1.dlbursttime.style.color = '#999999'
+document.form1.dlbursttime.readOnly = true;
+document.form1.priority.style.color = '#999999'
+document.form1.priority.readOnly = true;
+}
+}
+function setLimitComb()
+{
+var btn1 = document.form1.limitcomb.checked;
+if (btn1)
+{
+document.form1.limitdl.checked = true;
+document.form1.limitul.checked = true;
+document.form1.limitdl.disabled = true;
+document.form1.limitul.disabled = true;
+}
+else
+{
+document.form1.limitdl.disabled = false;
+document.form1.limitul.disabled = false;
+}
+}
+</SCRIPT>
+</p>
+</form>
+</div>
+</div>
+</div>

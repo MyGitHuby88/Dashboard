@@ -1,0 +1,314 @@
+<div class="header">
+<h4 class="title">{NEWMGR0}</h4>
+</div>
+<div class="content">
+<alert class="h4 text-danger">{ERROR}</alert>
+<div class="col-md-12">
+<div class="row">
+<form action="admin.php?cont=store_manager" method="post" name="form1" id="form1">
+<div class="col-md-6 col-sm-6">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{NEWMGR42}
+</div>
+<div class="panel-body">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{NEWMGR2}</td>
+<td class="b1"><input name="enablemanager" type="checkbox" id="enablemanager" value="1" {CHECKEDENMANAGER}>
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span>{NEWMGR1}</td>
+<td class="b1"><input name="managername" type="text" class="form-control input-sm" id="managername" value="{MANAGERNAME}" size="18" maxlength="32" placeholder="{NEWMGR12}">
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span>{NEWMGR3}</td>
+<td class="b1"><input name="password1" type="password" class="form-control input-sm" id="password2" value="{PASSWORD1}" size="18" maxlength="32" placeholder="{NEWMGR12}">
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span>{NEWMGR4}</td>
+<td class="b1"><input name="password2" type="password" class="form-control input-sm" id="password2" value="{PASSWORD2}" size="18" maxlength="32" placeholder="{NEWMGR12}">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR5}</td>
+<td class="b1"><input name="firstname" type="text" class="form-control input-sm" id="realname3" value="{FIRSTNAME}" size="50" maxlength="50">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR40}:</td>
+<td class="b1"><input name="lastname" type="text" class="form-control input-sm" id="realname3" value="{LASTNAME}" size="50" maxlength="50">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR43}</td>
+<td class="b1"><input name="company" type="text" class="form-control input-sm" id="company" value="{COMPANY}" maxlength="50" size="50" {EN_COMPANY}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR8}</td>
+<td class="b1"><input name="address" type="text" class="form-control input-sm" id="address3" value="{ADDRESS}" size="50" maxlength="50">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR9}</td>
+<td class="b1"><input name="city" type="text" class="form-control input-sm" id="city3" value="{CITY}" size="15" maxlength="15">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR10}</td>
+<td class="b1"><input name="zip" type="text" class="form-control input-sm" id="zip3" value="{ZIP}" size="8" maxlength="8">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR44}</td>
+<td class="b1"><strong>
+<select name="country" class="form-control input-sm" id="country" {EN_COUNTRY}> {COUNTRYLIST}
+</select>
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR45}</td>
+<td class="b1"><select name="state" class="form-control input-sm" id="state"  {EN_STATE}> {STATESLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR6}</td>
+<td class="b1"><input name="phone" type="text" class="form-control input-sm" id="phone3" value="{PHONE}" size="15" maxlength="15">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR7}</td>
+<td class="b1"><input name="mobile" type="text" class="form-control input-sm" id="phone3" value="{MOBILE}" size="15" maxlength="15">
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR21}</td>
+<td class="b1"><input name="email" type="text" class="form-control input-sm" id="email" value="{EMAIL}" maxlength="50" size="50" {EN_EMAIL}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR46}</td>
+<td class="b1"><input name="vatid" type="text" class="form-control input-sm" id="vatid" value="{VATID}" maxlength="40" size="40" {EN_TAXID}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR53}</td>
+<td class="b1"><strong>
+<select name="lang" class="form-control input-sm" id="lang"> {LANGLIST}
+</select>
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR11}</td>
+<td class="b1"><input name="comment" type="text" class="form-control input-sm" id="comment3" value="{COMMENT}" size="50" maxlength="200">
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-6">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{NEWMGR13}
+</div>
+<div class="panel-body">
+<div class="col-md-12 col-sm-12">
+<div class="row">
+<div class="col-md-6 col-sm-6">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{NEWMGR14}</td>
+<td class="b1"><input name="perm_listusers" type="checkbox" id="perm_listusers" value="1" {CHECKEDLISTUSERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR23}</td>
+<td class="b1"><input name="perm_listmanagers" type="checkbox" id="perm_listmanagers" value="1" {CHECKEDLISTMANAGERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR32}</td>
+<td class="b1"><input name="perm_listservices" type="checkbox" id="perm_listservices" value="1" {CHECKEDLISTSERVICES}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR15}</td>
+<td class="b1"><input name="perm_createusers" type="checkbox" id="perm_createusers" value="1" {CHECKEDCREATEUSERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR24}</td>
+<td class="b1"><input name="perm_createmanagers" type="checkbox" id="perm_createmanagers" value="1" {CHECKEDCREATEMANAGERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR33}</td>
+<td class="b1"><input name="perm_createservices" type="checkbox" id="perm_createservices" value="1" {CHECKEDCREATESERVICES}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR16}</td>
+<td class="b1"><input name="perm_editusers" type="checkbox" id="perm_editusers" value="1" {CHECKEDEDITUSERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR25}</td>
+<td class="b1"><input name="perm_editmanagers" type="checkbox" id="perm_editmanagers" value="1" {CHECKEDEDITMANAGERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR34}:</td>
+<td class="b1"><input name="perm_editservices" type="checkbox" id="perm_editservices" value="1" {CHECKEDEDITSERVICES}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR48}</td>
+<td class="b1"><input name="perm_edituserspriv" type="checkbox" id="perm_edituserspriv" value="1" {CHECKEDEDITUSERSPRIV}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR26}</td>
+<td class="b1"><input name="perm_deletemanagers" type="checkbox" id="perm_deletemanagers" value="1" {CHECKEDDELETEMANAGERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR35}</td>
+<td class="b1"><input name="perm_deleteservices" type="checkbox" id="perm_deleteservices" value="1" {CHECKEDDELETESERVICES}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR17}</td>
+<td class="b1"><input name="perm_deleteusers" type="checkbox" id="perm_deleteusers" value="1" {CHECKEDDELETEUSERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR29}</td>
+<td class="b1"><input name="perm_addcredits" type="checkbox" id="perm_addcredits" value="1" {CHECKEDADDCREDITS}>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-md-6 col-sm-6">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{NEWMGR18}</td>
+<td class="b1"><input name="perm_listinvoices" type="checkbox" id="perm_listinvoices" value="1" {CHECKEDLISTINVOICES}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR41}</td>
+<td class="b1"><input name="perm_allusers" type="checkbox" id="perm_allusers" value="1" {CHECKEDALLUSERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR22}</td>
+<td class="b1"><input name="perm_negbalance" type="checkbox" id="perm_negbalance" value="1" {CHECKEDNEGBALANCE}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR19}</td>
+<td class="b1"><input name="perm_listallinvoices" type="checkbox" id="perm_listallinvoices" value="1" {CHECKEDLISTALLINVOICES}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR27}</td>
+<td class="b1"><input name="perm_listonlineusers" type="checkbox" id="perm_listonlineusers" value="1" {CHECKEDLISTONLINEUSERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR47}</td>
+<td class="b1"><input name="perm_allowdiscount" type="checkbox" id="perm_allowdiscount" value="1" {CHECKEDALLOWDISCOUNT}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR52}</td>
+<td class="b1"><input name="perm_showinvtotals" type="checkbox" id="perm_showinvtotals" value="1" {CHKSHOWINVTOTALS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR28}</td>
+<td class="b1"><input name="perm_logout" type="checkbox" id="perm_logout" value="1" {CHECKEDLOGOUT}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR49}</td>
+<td class="b1"><input name="perm_enwriteoff" type="checkbox" id="perm_enwriteoff" value="1" {CHECKEDENWRITEOFF}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR20}</td>
+<td class="b1"><input name="perm_editinvoice" type="checkbox" id="perm_editinvoice" value="1" {CHECKEDEDITINVOICE}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR31}</td>
+<td class="b1"><input name="perm_cardsys" type="checkbox" id="perm_cardsys" value="1" {CHECKEDCARDSYS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR51}</td>
+<td class="b1"><input name="perm_cts" type="checkbox" id="perm_cts" value="1" {CHKCTS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR30}</td>
+<td class="b1"><input name="perm_trafficreport" type="checkbox" id="perm_trafficreport" value="1" {CHECKEDTRAFFICREPORT}>
+</td>
+</tr>
+<tr>
+<td class="td1">{NEWMGR50}</td>
+<td class="b1"><input name="perm_accessap" type="checkbox" id="perm_accessap" value="1" {CHKACCESSAP}>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p align="center">
+<input class="btn btn-sm btn-default" name="checkall" type="button" class="normal" id="checkall" value="{NEWMGR36}" onClick="checkAllCheckboxes(true)">
+<input class="btn btn-sm btn-default" name="clearall" type="button" class="normal" id="clearall" value="{NEWMGR37}" onClick="checkAllCheckboxes(false)">
+</p>
+</div>
+</div>
+</div>
+</div>
+<p class="text-center"> <span style="color:#FF0000;">*</span> {NEWMGR38}</p>
+<p align="center" class="normal">
+<input class="btn btn-md btn-primary" type="submit" name="Submit" value="{NEWMGR39}">
+<SCRIPT type=text/javascript><!--
+focusField("managername");
+function focusField(name)
+{
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+function checkAllCheckboxes(flag)
+{
+for (var i = 0; i < form1.elements.length;i++)
+{
+var e = form1.elements[i];
+if ( e.type=='checkbox' )
+e.checked = flag;
+}
+}
+//--> </SCRIPT>
+</p>
+</form>
+</div>

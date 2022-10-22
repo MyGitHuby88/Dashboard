@@ -1,0 +1,48 @@
+<div class="row">
+<center><alert class="h4 text-danger">{ERROR}</alert></center>
+<div class="col-lg-12">
+<h4 class="page-header">{VERIFYCARD0}</h4>
+</div>
+</div>
+<table width="80%" border="0" align="center" cellpadding="1" cellspacing="0"  class="tb-bdr">
+<tr>
+<td><table width="100%" border="0" cellpadding="5" cellspacing="0" >
+<tr>
+<td><form name="form1" action="user.php?cont=verifycard_sendcode" method="post">
+<table border="0" align="center" cellpadding="2" cellspacing="2">
+<tr>
+<td nowrap class="normal"><div align="right"> <font color="#FF0000">*</font>
+{VERIFYCARD1}: &nbsp; </div></td>
+<td class="normal"><input name="mobile" type="text" class="normal" id="mobile" value="{MOBILE}" size="20" maxlength="20">
+</td>
+</tr>
+</table>
+<br>
+<p class="text-center">
+{VERIFYCARD2}
+</p><br>
+<p class="text-center"><strong><font color="#FF0000">*</font>
+{VERIFYCARD3}</strong></p><br>
+<p class="text-center">
+{VERIFYCARD4}
+</p><br>
+<p class="text-center">
+<input class="btn btn-md btn-primary" name="submit" type="submit" id="submit" value="{VERIFYCARD5}">
+<SCRIPT type=text/javascript><!--
+focusField("mobile");
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+//--> </SCRIPT>
+</p>
+</form></td>
+</tr>
+</table></td>
+</tr>
+</table>

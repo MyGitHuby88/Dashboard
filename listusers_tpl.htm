@@ -1,0 +1,47 @@
+
+<div class="clearfix">
+											<div class="pull-right tableTools-container"><div class="dt-buttons btn-overlap btn-group"><a class="dt-button buttons-collection buttons-colvis btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table" data-original-title="" title=""><span><i class="fa fa-search bigger-110 blue"></i> <span class="hidden">Show/hide columns</span></span></a><a class="dt-button buttons-copy buttons-html5 btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table" data-original-title="" title=""><span><i class="fa fa-copy bigger-110 pink"></i> <span class="hidden">Copy to clipboard</span></span></a><a class="dt-button buttons-csv buttons-html5 btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table" data-original-title="" title=""><span><i class="fa fa-database bigger-110 orange"></i> <span class="hidden">Export to CSV</span></span></a><a class="dt-button buttons-excel buttons-flash btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table"><span><i class="fa fa-file-excel-o bigger-110 green"></i> <span class="hidden">Export to Excel</span></span><div style="position: absolute; left: 0px; top: 0px; width: 39px; height: 35px; z-index: 99;" data-original-title="" title=""><embed id="ZeroClipboard_TableToolsMovie_1" src="assets/swf/flashExport.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="39" height="35" name="ZeroClipboard_TableToolsMovie_1" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=39&amp;height=35" wmode="transparent"></div></a><a class="dt-button buttons-pdf buttons-flash btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table"><span><i class="fa fa-file-pdf-o bigger-110 red"></i> <span class="hidden">Export to PDF</span></span><div style="position: absolute; left: 0px; top: 0px; width: 39px; height: 35px; z-index: 99;" data-original-title="" title=""><embed id="ZeroClipboard_TableToolsMovie_2" src="assets/swf/flashExport.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="39" height="35" name="ZeroClipboard_TableToolsMovie_2" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=2&amp;width=39&amp;height=35" wmode="transparent"></div></a><a class="dt-button buttons-print btn btn-white btn-primary btn-bold" tabindex="0" aria-controls="dynamic-table" data-original-title="" title=""><span><i class="fa fa-print bigger-110 grey"></i> <span class="hidden">Print</span></span></a></div></div>
+										</div>
+<div class="content">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 10px">{QUICKJUMP}
+</div>
+<div class="content table-responsive">
+<table border="0" cellpadding="0" cellspacing="0" class="normal">
+<tr>
+<td><form name="formcolsel" method="post" action="admin.php?cont=list_users_selcolumns{SELCOLPARAMS}">{COLUMNS}</form></td>
+</tr>
+</table>
+<form name="form1" method="post" action="admin.php?cont=list_users_action">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="normal"> <TABLE cellSpacing=1 cellPadding=1
+width="100%" border=0
+valign="top">
+</TABLE>
+{USERS}</td>
+</tr>
+</table>
+</div>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="normal"><strong>  &nbsp;&nbsp; {LSTUSR10}:
+<select name="action" class="normal" id="action" onchange="Confirm()">
+<option></option>
+<option value="0">{LSTUSR15}</option>
+<option value="1">{LSTUSR16}</option>
+<option value="2">{LSTUSR17}</option>
+<option value="3">{LSTUSR35}</option>
+</select>
+<font color="{COL_ENABLED}">*{LSTUSR11}</font> <font color="{COL_EXPIRED}">*{LSTUSR12}</font> <font color="{COL_DISABLED}">*{LSTUSR13}</font> <font color="{COL_ONLINE}">*{LSTUSR14}</font> <font color="{COL_NOTVERIFIED}">*{LSTUSR21}</font></strong>
+</td>
+<td class="text-right"> {EXPORT} &nbsp; </td>
+</tr>
+</table>
+</form>
+<div class="panel-footer">{QUICKJUMP}</div>
+</div>
+</div>
+</div>
+<script language="JavaScript" src="helper.js" type="text/JavaScript">
+</script>

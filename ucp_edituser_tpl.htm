@@ -1,0 +1,125 @@
+<div class="header">
+<h4 class="title">{UCPEDITUSR0}</h4>
+</div>
+<div class="content">
+<alert class="h4 text-danger">{ERROR}</alert>
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{UCPEDITUSR0}
+</div>
+<div class="panel-body">
+<form name="form1" action="user.php?cont=update_user" method="post">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {UCPEDITUSR1}</td>
+<td class="b1"><input name="firstname" type="text" class="form-control input-sm" id="firstname" value="{FIRSTNAME}" maxlength="30" size="30">
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {UCPEDITUSR2}</td>
+<td class="b1"><input name="lastname" type="text" class="form-control input-sm" id="lastname" value="{LASTNAME}" maxlength="30" size="30">
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {UCPEDITUSR3}</td>
+<td class="b1"><input name="address" type="text" class="form-control input-sm" id="address" value="{ADDRESS}" maxlength="70" size="50">
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {UCPEDITUSR4}</td>
+<td class="b1"><input name="city" type="text" class="form-control input-sm" id="city" value="{CITY}" maxlength="15" size="15">
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {UCPEDITUSR5}</td>
+<td class="b1"><input name="zip" type="text" class="form-control input-sm" id="zip" value="{ZIP}" maxlength="8" size="8">
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {UCPEDITUSR6}</td>
+<td class="b1"><strong>
+<select name="country" class="form-control input-sm" id="country"> {COUNTRYLIST}
+</select>
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{UCPEDITUSR7}</td>
+<td class="b1"><select name="state" class="form-control input-sm" id="state"> {STATESLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{UCPEDITUSR8}</td>
+<td class="b1"><input name="phone" type="text" class="form-control input-sm" value="{PHONE}" maxlength="15" size="15">
+</td>
+</tr>
+<tr>
+<td class="td1">{UCPEDITUSR9}</td>
+<td class="b1"><input name="mobile" type="text" class="form-control input-sm" id="mobile" value="{MOBILE}" maxlength="15" size="15">
+</td>
+</tr>
+<tr>
+<td class="td1">{UCPEDITUSR10}</td>
+<td class="b1"><input name="email" type="text" class="form-control input-sm" id="email" value="{EMAIL}" maxlength="50" size="40">
+</td>
+</tr>
+<tr>
+<td class="td1">{UCPEDITUSR11}</td>
+<td class="b1"><input name="company" type="text" class="form-control input-sm" id="company" value="{COMPANY}" maxlength="30" size="30">
+</td>
+</tr>
+<tr>
+<td class="td1">{UCPEDITUSR12}</td>
+<td class="b1"><strong>
+<input name="taxid" type="text" class="form-control input-sm" id="taxid" value="{TAXID}" maxlength="40" size="40">
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{UCPEDITUSR17}</td>
+<td class="b1"><strong>
+<select name="lang" class="form-control input-sm" id="lang"> {LANGLIST}
+</select>
+</strong>
+</td>
+</tr>
+<tr>
+<tr>
+<td class="td1">{UCPEDITUSR15}</td>
+<td class="b1"><input name="alertemail" type="checkbox" id="alertemail" value="1" {CHKALERTEMAIL} {EN_ALERTEMAIL}>
+</td>
+</tr>
+<tr>
+<tr>
+<td class="td1">{UCPEDITUSR16}</td>
+<td class="b1"><strong>
+<input name="alertsms" type="checkbox" id="alertsms" value="1" {CHKALERTSMS} {EN_ALERTSMS}>
+</strong>
+</td>
+</tr>
+</table>
+<p align="center" class="normal"><font color="#FF0000">*</font>
+{UCPEDITUSR13}</p>
+<p align="center" class="normal">
+<input class="btn btn-sm btn-primary" name="Submit" type="submit" id="Submit" value="{UCPEDITUSR14}">
+<SCRIPT type=text/javascript><!--
+focusField("firstname");
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+//--> </SCRIPT>
+</p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>لوحة تحكم العميل</title>
+
+		<link rel="stylesheet" href="Alazhry-Css/userlogin.css">
+	</head>
+
+	<body>
+		<form role="form" name="form1" method="post" action="user.php?cont=login" onSubmit="return login(this);">
+			<table>
+				<tr>
+					<td colspan="2" ><h2>تسجيل الدخول الي حسابك</h2></td>
+				</tr>
+				<tr>
+					<td>
+						<h2>اسم المستخدم :</h2>
+					</td>    
+					<td>
+						<input name="username" type="text" id="username" placeholder="اسم المستخدم" autofocus>
+					</td>
+				</tr>
+				<tr> 
+					<td>
+						<h2>كلمة السر :</h2>
+					</td>
+					<td>
+						<input name="password" type="password" id="password" placeholder="كلمة السر">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h2>اللغة :</h2>
+					</td>
+					<td>
+						<select name="lang" id="lang" onChange="change_lang()">{LANGLIST}</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" name="Submit" value="تسجيل الدخول">
+					</td>
+				</tr>
+				
+				
+
+					
+
+					<!-- <div>
+						<label class="inline">
+							<input type="checkbox" class="ace" />
+							<span class="lbl"> Remember Me</span>
+						</label>
+					</div> -->
+
+
+			</table>
+
+<!-- ------------------------------------------------------------- -->
+
+				<SCRIPT type=text/javascript><!--
+				if (document.form1.username.value == "")
+				focusField("username");
+				else
+				focusField("password");
+				function focusField(name) {
+				for(var i = 0; i < document.forms.length; ++i) {
+				var obj = document.forms[i].elements[name];
+				if (obj) {
+				if (obj.length) { obj = obj[0]; }
+				if (obj.focus) { obj.focus(); }
+				}
+				}
+				}
+				//--> </SCRIPT>
+				<script src="md5.js"></script>
+				<script language="JavaScript"><!--
+				function login(form)
+				{
+				form['md5'].value = hex_hmac_md5(form['username'].value, hex_md5(form['password'].value) );
+				form['password'].value = '';
+				return true;
+				}
+				function change_lang()
+				{
+				len = document.form1.lang.length;
+				for (i = 0; i < len; i++)
+				{
+				if (document.form1.lang[i].selected)
+				lang = document.form1.lang[i].text;
+				}
+				window.location="user.php?cont=change_lang&lang=" + lang;
+				}
+				//--></script>
+				<input type="hidden" name="md5" value="">
+				<input name="url" type="hidden" id="url" value="{URL}">
+			</form>
+				<alert class="h5 text-danger">{ERROR}</alert>
+			
+</body>
+</html>
