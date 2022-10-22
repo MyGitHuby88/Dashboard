@@ -1,0 +1,6 @@
+Dear {USER}!
+
+Your new password is: {PASSWORD}
+
+Best regards,
+Administrator

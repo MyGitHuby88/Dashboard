@@ -1,0 +1,8 @@
+Dear {USER}!
+
+Use the following link to activate your new password:
+
+{LINK}
+
+Best regards,
+Administrator

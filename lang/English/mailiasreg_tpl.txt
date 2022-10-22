@@ -1,0 +1,10 @@
+New IAS user has been registered
+
+IAS ID: {IASID}
+First name: {FIRSTNAME}
+Last name: {LASTNAME}
+Address: {ADDRESS}
+City: {CITY}
+ZIP: {ZIP}
+Country: {COUNTRY}
+State: {STATE}

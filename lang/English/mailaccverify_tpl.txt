@@ -1,0 +1,12 @@
+Dear {USERNAME}!
+
+Use the following link to activate your new account:
+
+{LINK}
+
+If You can't click the link above, enter the following verification code:
+
+{ACTCODE}
+
+Best regards,
+Administrator

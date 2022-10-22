@@ -1,0 +1,1 @@
+Dear {USERNAME}! Your account expires on {EXPIRY}. You have {DAYS} day(s) to renew your account.

@@ -1,0 +1,9 @@
+Dear {USERNAME}!
+
+You have not enough deposit available, monthly service renewal failed.
+
+Available deposit: {AVAILDEPOSIT} {CURRENCY}
+Deposit required: {SRVPRICE} {CURRENCY}
+
+Sincerely,
+Administrator

@@ -1,0 +1,9 @@
+Dear {NAME}!
+
+Your account has been activated.
+
+User name: {USERNAME}
+Password: {PASSWORD}
+
+Sincerely,
+Administrator

@@ -1,0 +1,12 @@
+Dear {USERNAME}!
+
+Your monthly service been been renewed successfully.
+
+Available download traffic: {NEWDL}
+Available upload traffic: {NEWUL}
+Available total traffic: {NEWTOTAL}
+Available online time: {NEWONLINETIME}
+Expiry date: {NEWEXPIRATION}
+
+Sincerely,
+Administrator

@@ -1,0 +1,14 @@
+New user has been registered
+
+User name: {USERNAME}
+First name: {FIRSTNAME}
+Last name: {LASTNAME}
+Address: {ADDRESS}
+City: {CITY}
+ZIP: {ZIP}
+Country: {COUNTRY}
+State: {STATE}
+Phone: {PHONE}
+Mobile: {MOBILE}
+Email address: {EMAIL}
+Service: {SRVNAME}

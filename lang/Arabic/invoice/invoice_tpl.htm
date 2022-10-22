@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>فاتوره خدمة</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="style4.css" media="all" />
+  </head>
+  <body>
+    <header class="clearfix">
+      <div id="logo">
+        <img border="0" src="logo.png" width="250" height="100">
+      </div>
+      <div id="company">
+        <h2 class="name">العالميه نت لخدمات الكمبيوتر&nbsp;&nbsp; </h2>
+		<div><font color="#0087C3"><b>01030588300- 01206605677</b></font></div>
+        <div><a href="mailto:company@example.com"><b>01030588300</b></a><b><a href="mailto:company@example.com"> - </a></b>
+			<a href="mailto:company@example.com"><b>01206605677</b></a></div>
+      </div>
+      </div>
+    </header>
+    <main>
+      <div id="details" class="clearfix">
+        <div id="client" style="width: 184px; height: 112px">
+          <div class="to">حسني النوبي<b><br>
+			فاتوره رقم</b>:<strong style="font-weight: 400"><span lang="ar-eg">
+			</span>{INVID}</strong></div>
+          <div class="address">
+			<span style="color: rgb(75, 79, 86); font-family: helvetica, arial, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: right; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(241, 240, 240); display: inline !important; float: none;">
+بحري العوامه بجوار مسجد الرحمن</span><b><br>
+			اسم المستخدم : </b>
+			<strong style="color: rgb(0, 0, 0); font-family: Times New Roman; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: nowrap; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; font-weight:400">
+			<font size="2">{USERNAME}</font></strong></div>
+          <div class="email"><span lang="ar-eg"><b>الكاشير</b></span> :<strong style="font-family: Times New Roman; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: nowrap; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; font-weight:400"><font color="#000000" size="2">{MANAGERNAME}</font></strong></div>
+        </div>
+        <div id="invoice" style="width: 301px; height: 79px">
+          <h1><font size="3">التاريخ</font><font size="3"> المستحق<span lang="ar-eg"> 
+			حاليا</span> : </font><strong>
+			<font size="2">{YEAR1}.{MONTH1}.{DAY1}</font><font size="3">.</font></strong></h1>
+          <div class="date">تاريخ <span lang="ar-eg">السداد القادم</span>: <strong>{EXPIRY}</strong></div>
+          <div class="date">الايام التى تم اضافتها لك هيا : <strong>{ADDEDDAYS}</strong><strong style="font-weight: 400"><br>
+			الكميه المضافه لك هيا <br>
+			</strong> <strong>{ADDEDTOTAL}</strong></div>
+        </div>
+      </div>
+      <table border="0" cellspacing="0" cellpadding="0">
+        <thead>
+          <tr>
+            <th class="no" width="2%">#</th>
+            <th class="desc" width="52%"><strong><font size="5">:</font> </strong>
+			<b><font color="#FF0000">وصل من الاستاذ</font></b>
+			<strong><br>
+			&nbsp;<font size="5">{FULLNAME}</font></strong></th>
+            <th class="qty" style="background-color: #555555" width="3%">
+			<font color="#FFFFFF"><b>الكميه</b></font></th>
+            <th class="unit" width="10%"><b>مبلغ</b></th>
+            <th class="total" width="11%"><b>الاجمالى</b></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="no" width="2%">
+			<p style="text-align: center">01</td>
+            <td class="desc" width="52%"><h3><font color="#FF0000"><b>
+			<font size="3">تم</font><font size="3"> استلام المبلغ&nbsp; عن</font></b>
+			</font> </h3>قيمة اشتراك 
+			الانترنت والخدمة المقدمة <br>
+			<b>{SERVICE}</b><br>
+			موبيل رقم : <strong>{MOBILE}</strong><strong style="font-weight: 400"><br>
+			عنوان : </strong> <strong>{ADDRESS}</strong></td>
+            <td class="qty" style="background-color: #555555" width="3%">
+			<p style="text-align: center"><font color="#FFFFFF">1</font></td>
+            <td class="unit" width="10%">
+			<p style="text-align: center">{PRICE} {CURRENCY}</td>
+            <td class="total" width="11%">
+			<p style="text-align: center"><strong>{TOTALPRICE} 
+                {CURRENCY}</strong></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td width="2%"><font color="#000000">الختم</font></td>
+          </tr>
+        </tfoot>
+      </table>
+      <p dir="ltr"><b><font size="3">مع تحيات ادارة الشبكة&nbsp; !</font></b></p>
+      <div id="notices">
+        <div><b><font color="#FF0000"><span lang="ar-eg">ملحوظه !</span></font></b></div>
+        <div class="notice"><span lang="ar-eg">هذه الفاتوره تعتبر مستند رسمى 
+			لسداد قيمة الخدمة المقدمة<br>
+			جميع الفواتير لدينا مسجله على النظام ومراقبه</span></div>
+      </div>
+    </main>
+  </body>
+</html>

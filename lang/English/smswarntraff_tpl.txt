@@ -1,0 +1,1 @@
+Dear {USERNAME}! Your account expires soon. Download traffic left: {AVAILDL}, upload traffic left: {AVAILUL}, total traffic left: {AVAILTOTAL}, online time left: {AVAILUPTIME}. Please refill your account as soon as possible.

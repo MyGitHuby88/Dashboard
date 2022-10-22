@@ -1,0 +1,6 @@
+Dear {USERNAME}!
+
+Your new service has been activated: {NEWSRV}
+
+Sincerely,
+Administrator
