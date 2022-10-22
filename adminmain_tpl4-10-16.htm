@@ -1,0 +1,185 @@
+<html>
+<head>
+<title>{ACPMAIN3}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css"></style>
+<link rel="stylesheet" href="styles.css" type="text/css">
+<link rel="shortcut icon" href="/favicon.ico" />
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<script type="text/javascript" src="menu/JSCookMenu.js"></script>
+
+<script type="text/javascript"><!--
+var MenuDefs =
+[
+    ['', '{MENU00}', '', '', '',
+        ['&nbsp', '{MENU0000}', 'admin.php', '', ''],
+        ['&nbsp', '{MENU0001}', 'admin.php?cont=edit_settings', '', ''],
+        _cmSplit,
+        ['&nbsp', '{MENU0002}', 'admin.php?cont=logout', '', ''],
+    ],
+    ['', '{MENU01}', '', '', '',
+        ['&nbsp', '{MENU0100}', 'admin.php?cont=list_users', '', ''],
+        ['&nbsp', '{MENU0101}', 'admin.php?cont=search_users', '', ''],
+        ['&nbsp', '{MENU0102}', 'admin.php?cont=new_user', '', ''],
+        _cmSplit,
+        ['&nbsp', '{MENU0103}', 'admin.php?cont=list_usergroups', '', ''],
+        ['&nbsp', '{MENU0104}', 'admin.php?cont=new_usergroup', '', ''],
+    ],
+    ['', '{MENU02}', '', '', '',
+        ['&nbsp', '{MENU0200}', 'admin.php?cont=list_services', '', ''],
+        ['&nbsp', '{MENU0201}', 'admin.php?cont=new_service', '', ''],
+        _cmSplit,
+        ['&nbsp', '{MENU0202}', 'admin.php?cont=list_scheduled_services', '', ''],
+        ['&nbsp', '{MENU0203}', 'admin.php?cont=list_service_history', '', ''],
+    ],
+    ['', '{MENU03}', '', '', '',
+        ['&nbsp', '{MENU0300}', 'admin.php?cont=list_managers', '', ''],
+        ['&nbsp', '{MENU0301}', 'admin.php?cont=new_manager', '', ''],
+    ],
+    ['', '{MENU04}', '', '', '',
+        ['&nbsp', '{MENU0400}', 'admin.php?cont=list_nases', '', ''],
+        ['&nbsp', '{MENU0401}', 'admin.php?cont=new_nas', '', ''],
+    ],
+    ['', '{MENU05}', '', '', '',
+        ['&nbsp', '{MENU0500}', 'admin.php?cont=list_ap', '', ''],
+        ['&nbsp', '{MENU0501}', 'admin.php?cont=new_ap', '', ''],
+    ],
+    ['', '{MENU06}', '', '', '',
+        ['&nbsp', '{MENU0600}', 'admin.php?cont=list_cmts', '', ''],
+        ['&nbsp', '{MENU0601}', 'admin.php?cont=new_cmts', '', ''],
+    ],
+    ['', '{MENU07}', '', '', '',
+        ['&nbsp', '{MENU0700}', 'admin.php?cont=list_pools', '', ''],
+        ['&nbsp', '{MENU0701}', 'admin.php?cont=new_pool', '', ''],
+    ],
+    ['', '{MENU08}', '', '', '',
+        ['&nbsp', '{MENU0800}', 'admin.php?cont=search_invoices', '', ''],
+        ['&nbsp', '{MENU0801}', 'admin.php?cont=batch_billing', '', ''],
+    ],
+    ['', '{MENU09}', '', '', '',
+        ['&nbsp', '{MENU0900}', 'admin.php?cont=list_cardseries', '', ''],
+        ['&nbsp', '{MENU0901}', 'admin.php?cont=list_users&listacctype=4', '', ''],
+        ['&nbsp', '{MENU0902}', 'admin.php?cont=list_refillcards', '', ''],
+        ['&nbsp', '{MENU0903}', 'admin.php?cont=search_refillcards', '', ''],
+        _cmSplit,
+        ['&nbsp', '{MENU0904}', 'admin.php?cont=cardgen', '', ''],
+        _cmSplit,
+        ['&nbsp', '{MENU0905}', 'admin.php?cont=cardstats', '', ''],
+    ],
+    ['', '{MENU10}', '', '', '',
+        ['&nbsp', '{MENU1000}', 'admin.php?cont=list_users&listacctype=32', '', ''],
+        ['&nbsp', '{MENU1001}', 'admin.php?cont=list_ias', '', ''],
+        ['&nbsp', '{MENU1002}', 'admin.php?cont=new_ias', '', ''],
+    ],
+    ['', '{MENU11}', '', '', '',
+        ['&nbsp', '{MENU1100}', 'admin.php?cont=list_online_radius', '', ''],
+        ['&nbsp', '{MENU1101}', 'admin.php?cont=list_online_cm', '', ''],
+        _cmSplit,
+        ['&nbsp', '{MENU1102}', 'admin.php?cont=traffic_report', '', ''],
+        ['&nbsp', '{MENU1103}', 'admin.php?cont=search_traffic_data', '', ''],
+        ['&nbsp', '{MENU1104}', 'admin.php?cont=search_traffic_summary', '', ''],
+        _cmSplit,
+        ['&nbsp', '{MENU1105}', 'admin.php?cont=search_cts_data', '', ''],
+        ['&nbsp', '{MENU1106}', 'admin.php?cont=search_postauth', '', ''],
+        _cmSplit,
+        ['&nbsp', '{MENU1107}', 'admin.php?cont=quick_syslog', '', ''],
+        ['&nbsp', '{MENU1108}', 'admin.php?cont=list_syslog', '', ''],
+        _cmSplit,
+        ['&nbsp', '{MENU1109}', 'admin.php?cont=sysinfo', '', ''],
+        ['&nbsp', '{MENU1110}', 'admin.php?cont=sysstats', '', ''],
+    ],
+    ['', '{MENU12}', '', '', '',
+        ['&nbsp', '{MENU1200}', 'admin.php?cont=show_bulkmail', '', ''],
+        ['&nbsp', '{MENU1201}', 'admin.php?cont=show_bulksms', '', ''],
+        _cmSplit,
+        ['&nbsp', '{MENU1202}', 'admin.php?cont=start_radius_server', '', ''],
+        ['&nbsp', '{MENU1203}', 'admin.php?cont=stop_radius_server', '', ''],
+        ['&nbsp', '{MENU1204}', 'admin.php?cont=restart_radius_server', '', ''],
+        ['&nbsp', '{MENU1205}', 'admin.php?cont=resync_radius', '', ''],
+        _cmSplit,
+        ['&nbsp', '{MENU1206}', 'admin.php?cont=start_dhcp_server', '', ''],
+        ['&nbsp', '{MENU1207}', 'admin.php?cont=stop_dhcp_server', '', ''],
+        ['&nbsp', '{MENU1208}', 'admin.php?cont=restart_dhcp_server', '', ''],
+        ['&nbsp', '{MENU1209}', 'admin.php?cont=resync_dhcp', '', ''],
+    ]
+];
+--></script>
+
+<link rel="stylesheet" href="menu/theme/theme.css" type="text/css">
+<script type="text/javascript" src="menu/theme/theme.js"></script>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td class="normal"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="images/main1_01.gif" width="508" height="85" border="0" usemap="#Map"></td>
+          <td width="100%" background="images/main1_03.gif"></td>
+          <td><img src="images/main1_02.gif" width="267" height="85"></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td class="normal"> <table width="100%" border="0" cellspacing="0" cellpadding="2">
+        <tr> 
+          <td background="images/menubg.gif" bgcolor="BBD1FF"><div id="menu1"></div>
+<script type="text/javascript"><!--
+	cmDraw('menu1', MenuDefs, 'hbr', cmThemeGray);
+--></script>
+</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="3" cellspacing="0" bgcolor="#EAF1FF">
+        <tr> 
+          <td>{CONTENT} </td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="2">
+        <tr> 
+          <td bgcolor="#BBD1FF" class="normal"><p class="normal"><font color="#184470">{ACPMAIN0}: 
+              <strong>{ACTMANAGER}</strong> | {ACPMAIN1}: <strong>{DATE}</strong> 
+              | {ACPMAIN2}: <strong>{VER}</strong> | {ACPMAIN4}: <strong>{RADSTATUS} 
+              </strong>| {ACPMAIN5}: <strong>{DHCPDSTATUS} </strong></font></p>
+            </td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+         <!-- <td><img src="images/bottom_01.gif" width="567" height="24"></td>
+          <td width="100%" background="images/bottom_bg.gif"></td>
+          <td><div align="right"><img src="images/bottom_02.gif" width="208" height="24"></div></td>-->
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<map name="Map">
+  <area shape="rect" coords="0,0,254,48" href="admin.php">
+</map>
+</body>
+<footer>
+
+    <p>
+        <span style="margin-top: -10px;text-align:left;float:left;">© 2016 <a href="admin.php" alt="Radius Manager"style="color: #F8F8E0;">Radius Manager</a></span>
+
+    </p>
+
+</footer>
+<style>
+    footer {
+        min-height: 24px;
+        margin: 0px 0px 0px 0px;
+        padding: 10px 20px;
+        background: #0742FE;
+        color: #fff !important;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        display: block;
+    }
+</style>
+</html>

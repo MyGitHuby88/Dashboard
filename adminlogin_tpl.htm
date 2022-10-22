@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title> لوحة تحكم المدير</title>
+	<link rel="stylesheet" href="Alazhry-Css/login.css">
+</head>
+<body>
+	<form name="form1" method="post" action="admin.php?cont=login" onSubmit="return login(this);">
+		<table>
+			<a class="paguser" href="http://2.2.2.1/radiusmanager/user.php" target="_blank"> صفحة العميل</a> 
+			<tr>
+				<td colspan="2" ><h2>لوحة تحكم المدير</h2></td>
+			</tr>
+			<tr>
+                <td>
+                    <h2>اسم المدير :</h2>
+                </td>    
+                <td><input type="text" name="managername" id="managername" placeholder="username"/></td>
+            </tr>
+			<tr> 
+                <td>
+                    <h2>كلمة السر :</h2>
+                </td>
+                <td>
+                    <input type="password" name="password" id="password" placeholder="password">
+                </td>
+            </tr>
+			<tr>
+                <td>
+                    <h2>اللغة :</h2>
+                </td>
+                    <td>
+						<select name="lang" id="lang" onChange="change_lang()">{LANGLIST}</select>
+                    </td>
+            </tr>
+			<tr>
+                <td colspan="2">
+					<input type="submit" name="Submit" value="تسجيل الدخول">
+                </td>
+            </tr>
+		</table>
+
+
+										<!-- javascript -->
+										<SCRIPT type=text/javascript><!--
+						// <!-- ****************** اسم المستخدم وكلمة المرور *************** -->
+						if (document.form1.managername.value == "")
+						focusField("managername");
+						else
+						focusField("password");
+
+						function focusField(name)
+						{
+						for(var i = 0; i < document.forms.length; ++i) {
+							var obj = document.forms[i].elements[name];
+							if (obj) {
+							if (obj.length) { obj = obj[0]; }
+							if (obj.focus) { obj.focus(); }
+							}
+						}
+						}
+						// ********************** تغيير اللغه ********
+						function change_lang()
+						{
+						len = document.form1.lang.length;
+
+						for (i = 0; i < len; i++) 
+						{
+							if (document.form1.lang[i].selected)
+							lang = document.form1.lang[i].text;
+						}
+						window.location="admin.php?cont=change_lang&lang=" + lang;
+						} 
+						//--> </SCRIPT>
+								<script src="md5.js"></script>
+						<!-- ****************** اسم المستخدم وكلمة المرور *************** -->
+							<script language="JavaScript">
+								function login(form)
+								{
+									form['md5'].value = hex_hmac_md5(form['managername'].value, hex_md5(form['password'].value) );
+									form['password'].value = '';
+									return true;
+								}
+							</script> 
+							<input type="hidden" name="md5" value="">
+							<input name="url" type="hidden" id="url" value="{URL}">
+	</form>
+						
+							<alert class="h5 text-danger">{ERROR}</alert>
+					
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<div class="header">
+<h4 class="title">{ADDMONEY0}</h4>
+</div>
+<div class="content">
+<center><alert class="h4 text-danger">{ERROR}</alert></center>
+<div class="col-md-12">
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+<div class="panel panel-primary ">
+<form name="form1" method="post" action="admin.php?cont=add_deposit" onSubmit="return ConfirmMsg('{ADDMONEY14}')">
+<div class="panel-body">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{ADDMONEY1}:</td>
+<td class="b1"><strong>{USERNAME}
+<input name="taxpercent" type="hidden" id="taxpercent" value="{TAXPERCENT}">
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{ADDMONEY2}:</td>
+<td class="b1">
+<input type="radio" name="paymode" value="0" {SELECTEDCASH}>
+<strong>{ADDMONEY12}</strong>
+<br>
+<input type="radio" name="paymode" value="1" {SELECTEDTRANSFER}>
+<strong>{ADDMONEY13}</strong>
+</td>
+</tr>
+<tr>
+<td class="td1"><strong> {ADDMONEY3}:</strong></td>
+<td class="b1">
+<table border="0" cellpadding="4" cellspacing="0" bgcolor="#A7BADC">
+<tr>
+<td class="normal"><strong>
+<input name="price" type="text" class="normal" id="price" value="{PRICE}">
+{CURRENCY}</strong></td>
+<td bgcolor="#DEE5F2" class="normal"><strong><font color="#FF0000">{BALANCE}</font></strong></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="td1">{ADDMONEY4}:</td>
+<td class="b1"><textarea name="remark" cols="50" rows="3" class="normal" id="remark" onKeyDown="textCounter(document.form1.remark, document.form1.remLen1, 400)" onKeyUp="textCounter(document.form1.remark, document.form1.remLen1, 400)">{REMARK}</textarea>
+<input readonly type="hidden" name="remLen1" size="3" maxlength="3" value="400">
+</td>
+</tr>
+<tr>
+<td class="td1">{ADDMONEY5}:</td>
+<td class="b1"><input name="comment" type="text" class="normal" id="comment" value="{COMMENT}" size="50" maxlength="70">
+</td>
+</tr>
+</tbody>
+</table>
+<p class="text-center"><em>{ADDMONEY6}</em></p>
+<p class="text-center">
+<input class="btn btn-primary btn-md" name="Submit" type="submit" id="submit" value="{ADDMONEY7}">
+<input name="username" type="hidden" id="username" value="{USERNAME}">
+<input name="transid" type="hidden" id="transid" value="{TRANSID}">
+<SCRIPT type=text/javascript><!--
+focusField("price");
+function focusField(name)
+{
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+//--> </SCRIPT>
+<script language="JavaScript" src="helper.js" type="text/JavaScript">
+</script>
+</p>
+<p><strong><span style="color: #FF0000">{ADDMONEY8}</span>{ADDMONEY9}<br>
+</form>
+</div>
+</div>
+<br>
+<p class="text-center">[<a href="admin.php?cont=list_invoices&username={USERNAME}">{ADDMONEY10}</a>] [<a href="admin.php?cont=traffic_report&username={USERNAME}">{ADDMONEY11}</a>]
+</p>
+</div>
+</div>
+</div>
