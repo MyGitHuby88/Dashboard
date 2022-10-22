@@ -1,0 +1,47 @@
+<div class="header">
+<h4 class="title">{ONLINEUSR0}</h4>
+</div>
+<div class="content">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{QUICKJUMP}
+</div>
+<div class="text-right">
+<form class="form-inline" role="form" name="form2" method="post" action="admin.php?cont=list_online_radius">
+<div class="form-group">
+<label for="filternasid">{ONLINEUSR8}:</label><select name="filternasid" id="filternasid" onChange="this.form.submit()"> {NASLIST}</select>
+<label for="filterapid">{ONLINEUSR16}:</label><select name="filterapid" id="filterapid" onChange="this.form.submit()"> {APLIST}</select>
+<label for="filtergroupid">{ONLINEUSR15}:</label><select name="filtergroupid" id="filtergroupid" onChange="this.form.submit()"> {GROUPLIST}</select> <input name="filterusername" type="text" id="filterusername" placeholder="{ONLINEUSR14}" value="{FILTERUSERNAME}">
+</div>
+</form>
+</div>
+<div class="content table-responsive">
+<table border="0" cellpadding="0" cellspacing="0" class="normal">
+<tr>
+<td><form name="formcolsel" method="post" action="admin.php?cont=list_onlineradius_selcolumns{SELCOLPARAMS}">{COLUMNS}</form></td>
+</tr>
+</table>
+<form name="form1" method="post" action="admin.php?cont=online_users_action">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="4"> {ONLINEUSERS}</td>
+</tr>
+</table>
+</div>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td> <div class="text-left" class="normal"> <strong> &nbsp;&nbsp; {ONLINEUSR9}:</strong>
+<select name="action" class="normal" id="action" onchange=Confirm()>
+<option></option>
+<option value="0">{ONLINEUSR10}</option>
+<option value="1">{ONLINEUSR12}</option>
+</select>
+<strong><font color="{COL_SPECPER}">*{ONLINEUSR11}</font> &nbsp; <font color="{COL_DISABLED}">*{ONLINEUSR30}</font></strong></div>
+</td>
+</tr>
+</table>
+</form>
+<div class="panel-footer">{QUICKJUMP}</div>
+</div>
+</div>
+<script language="JavaScript" src="helper.js" type="text/JavaScript">
+</script>

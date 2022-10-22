@@ -1,0 +1,83 @@
+<div class="header">
+<h4 class="title">{EDITAP0}</h4>
+</div>
+<div class="content">
+<alert class="h4 text-danger">{ERROR}</alert>
+<div class="col-md-12">
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{NEWAP0}
+</div>
+<div class="panel-body">
+<form action="admin.php?cont=update_ap" method="post" name="form1" id="form1">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{EDITAP1}</td>
+<td class="b1"><input name="enable" type="checkbox" id="enable" value="1" {CHKENABLE}>
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {EDITAP2}</td>
+<td class="b1"><input name="name" type="text" class="form-control input-sm" id="name" value="{NAME}" size="32" maxlength="32">
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {EDITAP3}</td>
+<td class="b1"><input name="ip" type="text" class="form-control input-sm" id="ip" value="{IP}" size="15" maxlength="15">
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITAP4}</td>
+<td class="b1"><input type="radio" name="accessmode" value="0" {CHKACCESSMODESNMP}>
+{EDITAP5}<br> <input type="radio" name="accessmode" value="1" {CHKACCESSMODEAPI}>
+{EDITAP6}
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {EDITAP7}</td>
+<td class="b1"><input name="community" type="text" class="form-control input-sm" id="community" value="{COMMUNITY}" size="30" maxlength="60">
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {EDITAP8}</td>
+<td class="b1"><input name="apiusername" type="text" class="form-control input-sm" id="apiusername" value="{APIUSERNAME}" size="30" maxlength="60">
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {EDITAP9}</td>
+<td class="b1"><input name="apipassword" type="password" class="form-control input-sm" id="apipassword" value="{APIPASSWORD}" size="30" maxlength="60">
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITAP10}</td>
+<td class="b1"><input name="description" type="text" class="form-control input-sm" id="description" value="{DESCRIPTION}" size="80" maxlength="200">
+</td>
+</tr>
+</tbody>
+</table>
+<p align="center" class="normal"><font color="#FF0000">*</font> {EDITAP11}</p>
+<p align="center">
+<input class="btn btn-md btn-primary" type="submit" name="Submit" value="{EDITAP12}">
+<SCRIPT type=text/javascript><!--
+focusField("name");
+function focusField(name)
+{
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+//--> </SCRIPT>
+<input name="id" type="hidden" id="id" value="{ID}">
+</p>
+</form>
+<p align="center" class="normal">[<a href="admin.php?cont=confirm_del_ap&id={ID}&name={NAME}">{EDITAP13}</a>]</p>
+</div>
+</div>
+</div>
+</div>
+</div>

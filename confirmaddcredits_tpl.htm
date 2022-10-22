@@ -1,0 +1,147 @@
+<div class="header">
+<h4 class="title">{CFMADDCRED0}</h4>
+</div>
+<div class="content">
+<alert class="h4 text-danger">{ERROR}</alert>
+<div class="col-md-12">
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+<div class="panel panel-primary ">
+<div class="panel-body">
+<form name="form1" method="post" action="admin.php?cont=add_credits&username={USERNAME}&transid={TRANSID}" onSubmit="return ConfirmMsg('{CFMADDCRED20}')" >
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{CFMADDCRED1}:</td>
+<td class="b1"><strong>{USERNAME}</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMADDCRED2}:</td>
+<td class="b1"><strong>{SRVNAME}</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMADDCRED3}:</td>
+<td class="b1"><strong>{PAYMODESTR}</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMADDCRED4}:</td>
+<td class="b1"><strong>{TRAFFICUNITDL} MB</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMADDCRED21}:</td>
+<td class="b1"><strong>{TRAFFICUNITUL} MB</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMADDCRED22}:</td>
+<td class="b1"><strong>{TRAFFICUNITCOMB} MB</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMADDCRED5}:</td>
+<td class="b1"><strong>{TIMEUNITEXP} {TIMEBASEEXP}</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMADDCRED25}:</td>
+<td class="b1"><strong>{TIMEUNITONLINE} {TIMEBASEONLINE}</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMADDCRED6}:</td>
+<td class="b1"><strong> {UNITPRICE} {CURRENCY}
+<input name="unitprice" type="hidden" class="inputreadonly" id="unitprice" value="{UNITPRICE}" >
+<input name="price" type="hidden" class="inputreadonly" id="price" value="{PRICE}" >
+<input name="vat" type="hidden" class="inputreadonly" id="vat" value="{VAT}" >
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMADDCRED7}:</td>
+<td class="b1"><strong> {AMOUNT} </strong> <strong>
+<input name="amount" type="hidden" class="inputreadonly" id="amount2" value="{AMOUNT}" maxlength="10" size="10" onChange="CalcTotalPrice()">
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMADDCRED9}:</td>
+<td class="b1"><table border="0" cellpadding="4" cellspacing="0" bgcolor="#A7BADC">
+<tr>
+<td class="normal"> <strong> {TOTALPRICESTR} {CURRENCY}
+<input name="totalprice" type="hidden" class="inputreadonly" id="pricetax2" value="{TOTALPRICE}" readonly>
+</strong></td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p class="text-center">{CFMADDCRED11}</p>
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{CFMADDCRED12}:</td>
+<td class="b1"><input name="expiration" type="text" class="{INPUTCLASS}" id="expiration" value="{EXPIRATION}" maxlength="10" size="10" {READONLY}>
+({CFMADDCRED15})
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMADDCRED14}:</td>
+<td class="b1"><strong>
+<input name="time" type="text" class="{INPUTCLASS}" id="time" value="{TIME}" size="10" maxlength="10" {READONLY}>
+</strong><span class="normal">{TIMEBASEONLINE}</span>
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMADDCRED13}:</td>
+<td class="b1"><input name="trafficdl" type="text" class="{INPUTCLASS}" id="trafficdl" value="{TRAFFICDL}" {READONLY}>
+{CFMADDCRED16}
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMADDCRED23}:</td>
+<td class="b1"><input name="trafficul" type="text" class="{INPUTCLASS}" id="trafficul" value="{TRAFFICUL}" {READONLY}>
+{CFMADDCRED16}
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMADDCRED24}:</td>
+<td class="b1"><input name="trafficcomb" type="text" class="{INPUTCLASS}" id="trafficcomb" value="{TRAFFICCOMB}" {READONLY}>
+{CFMADDCRED16}
+</td>
+</tr>
+</tbody>
+</table>
+<SCRIPT type=text/javascript><!--
+focusField("megabytes");
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+//--> </SCRIPT>
+<p class="text-center">
+<input class="btn btn-md btn-primary" name="Submit" type="submit" id="Submit" value="{CFMADDCRED18}">
+<script language="JavaScript" src="helper.js" type="text/JavaScript">
+</script>
+<input name="days" type="hidden" id="days" value="{DAYS}">
+<input name="credaddmode" type="hidden" id="credaddmode" value="{CREDADDMODE}">
+<input name="paymode" type="hidden" id="paymode" value="{PAYMODE}">
+<input name="remark" type="hidden" id="remark" value="{REMARK}">
+<input name="comment" type="hidden" id="comment" value="{COMMENT}">
+</p>
+<p class="text-center"> <span style="color:#FF0000">{CFMADDCRED19}</span> </p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>

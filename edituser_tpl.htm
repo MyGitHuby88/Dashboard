@@ -1,0 +1,694 @@
+<div class="header">
+<h4 class="title">{EDUSR0}</h4>
+</div>
+<div class="content">
+<alert class="h4 text-danger">{ERROR}</alert>
+<form name="form1" action="admin.php?cont=update_user&username={USERNAME}" method="post">
+<div class="col-md-12">
+<div class="row">
+<div class="col-md-8 col-sm-12">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{EDUSR0}
+</div>
+<div class="panel-body">
+<div class="col-md-6 col-sm-6">
+<table class="table table-striped table-condensed">
+<tbody>                      
+</strong></td>
+<td nowrap class="normal">Show Password:</td>
+<td nowrap class="normal"><strong> 
+<input name="showusrpwdc" type="checkbox" id="showusrpwdc" value="0" onClick="getPasswordOfUser()">
+</strong></td>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR1}</td>
+<td class="b1"><input name="enableuser" type="checkbox" id="enableuser6" value="1" {CHECKEDENUSER}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR54}</td>
+<td class="b1"><input name="verified" type="checkbox" id="verified" value="1" {CHECKEDVERIFIED} {EN_VERIFIED}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR86}</td>
+<td class="b1"><input name="alertemail" type="checkbox" id="alertemail11" value="1" {CHKALERTEMAIL}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR87}</td>
+<td class="b1"><input name="alertsms" type="checkbox" id="alertsms7" value="1" {CHKALERTSMS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR50}</td>
+<td class="b1"><strong>
+<input name="warningsent" type="checkbox" id="warningsent3" value="1" {CHECKEDWARNINGSENT} {EN_WARNINGSENT}>
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {EDUSR2}<br>{EDUSR36}</td>
+<td class="b1"><input name="password1" type="password" class="form-control input-sm"  id="password1" value="{PASSWORD1}" maxlength="32" size="18" {EN_PSW1}>
+<script language="JavaScript" type="text/JavaScript">
+function setPswFields()
+{
+	var btn1 = document.form1.changepsw.checked;
+	
+	if (btn1)
+	{
+		document.form1.password1.disabled = false;
+		document.form1.password2.disabled = false;
+		document.form1.password1.value = "";
+		document.form1.password2.value = "";
+		focusField("password1");
+    }
+	else
+	{
+		document.form1.password1.disabled = true;
+		document.form1.password2.disabled = true;
+		document.form1.password1.value = "**********************";
+		document.form1.password2.value = "**********************";
+    }
+}
+function focusField(name) {
+  for(var i = 0; i < document.forms.length; ++i) {
+    var obj = document.forms[i].elements[name];
+    if (obj) {
+      if (obj.length) { obj = obj[0]; }
+      if (obj.focus) { obj.focus(); }
+    }
+  }
+}
+
+function getPasswordOfUser()
+{
+  	var usnm = document.getElementById("theusername").textContent;
+  	//alert(usnm);
+	$(document).ready(function () {
+  
+      if (document.getElementById("showusrpwdc").checked){
+      	// Create our XMLHttpRequest object
+		var hr = new XMLHttpRequest();
+		// Create some variables we need to send to our PHP file
+		var url = "showusrpwd.php";
+		var params= "username=" + usnm;
+			
+		hr.open("POST", url, true);
+		hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		// Access the onreadystatechange event for the XMLHttpRequest object
+		hr.onreadystatechange = function() {
+			if(hr.readyState == 4 && hr.status == 200) {
+				var return_data = hr.responseText;
+              	document.getElementById("shownpwd").innerHTML = return_data;
+			}
+		}
+		// Send the data to PHP now... and wait for response to update the status div
+		hr.send(params); // Actually execute the request
+        
+      } else {
+       	 document.getElementById("shownpwd").innerHTML = "****";
+      }
+	});
+} 
+</script><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script></td>
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {EDUSR3}</td>
+<td class="b1"><input name="password2" type="password" class="form-control input-sm"  id="password2" value="{PASSWORD2}" maxlength="32" size="18" {EN_PSW2}>
+<input name="changepsw" type="checkbox" id="changepsw" value="1" onClick="setPswFields()" {EN_CHANGEPSW} {CHKCHANGEPSW}>
+{EDUSR59}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR4}</td>
+<td class="b1"><input name="maccm" type="text" class="normal" id="maccm" maxlength="17" value="{MACCM}" size="18" {EN_MACCM}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR60}</td>
+<td class="b1"><input type="radio" name="ipmodecm" value="1" {CHKIPMODECMRADIUS} onClick="setIPModeCM()" {EN_IPMODECM}>
+{EDUSR63} <strong>
+<select name="poolidcm" class="normal" id="poolidcm" {EN_POOLIDCM}> {IPPOOLLISTCM}
+</select>
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1"><input type="radio" name="ipmodecm" value="2" {CHKIPMODECMSTATIC} onClick="setIPModeCM()" {EN_IPMODECM}>
+<strong></strong>{EDUSR64}</td>
+<td class="b1"><input name="staticipcm" type="text" class="normal" id="staticipcm" value="{STATICIPCM}" maxlength="15" size="15" {EN_STATICIPCM}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR5}</td>
+<td class="b1"><input name="mac" type="text" class="normal" id="mac" maxlength="17" value="{MAC}" size="18" {EN_MAC}>
+<strong> <br>
+<input name="usemacauth" type="checkbox" id="usemacauth" value="1" {CHECKEDUSEMACAUTH} {EN_USEMACAUTH}>
+</strong>{EDUSR37}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR61}</td>
+<td class="b1"><input type="radio" name="ipmodecpe" value="0" {CHKIPMODECPENAS} onClick="setIPModeCPE()" {EN_IPMODECPE}>
+{EDUSR62}
+</td>
+</tr>
+<tr>
+<td class="td1"><input type="radio" name="ipmodecpe" value="1" {CHKIPMODECPERADIUS} onClick="setIPModeCPE()" {EN_IPMODECPE}>
+{EDUSR63}</td>
+<td class="b1"><strong>
+<select name="poolidcpe" class="normal" id="poolidcpe"> {IPPOOLLISTCPE}
+</select>
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1"><input type="radio" name="ipmodecpe" value="2" {CHKIPMODECPESTATIC} onClick="setIPModeCPE()" {EN_IPMODECPE}>
+<strong></strong>{EDUSR64}</td>
+<td class="b1"><input name="staticipcpe" type="text" class="normal" id="staticipcpe" value="{STATICIPCPE}" maxlength="15" size="15" {EN_STATICIPCPE}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR6}:</td>
+<td class="b1"><input name="simuse" type="text" class="normal" id="simuse" value="{SIMUSE}" maxlength="4" size="4" {EN_SIMUSE}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR45}</td>
+<td class="b1"><input name="firstname" type="text" class="form-control input-sm" id="firstname" value="{FIRSTNAME}" maxlength="50" size="50" {EN_FIRSTNAME}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR46}</td>
+<td class="b1"><input name="lastname" type="text" class="form-control input-sm" id="lastname" value="{LASTNAME}" maxlength="50" size="50" {EN_LASTNAME}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR7}</td>
+<td class="b1"><input name="company" type="text"class="form-control input-sm" id="company" value="{COMPANY}" maxlength="50" size="50" {EN_COMPANY}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR8}</td>
+<td class="b1"><input name="address" type="text" class="form-control input-sm" id="address" value="{ADDRESS}" maxlength="100" size="50" {EN_ADDRESS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR9}</td>
+<td class="b1"><input name="city" type="text" class="form-control input-sm" id="city" value="{CITY}" maxlength="50" size="30" {EN_CITY}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR10}</td>
+<td class="b1"><input name="zip" type="text" class="form-control input-sm" id="zip" value="{ZIP}" maxlength="8" size="8" {EN_ZIP}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR47}</td>
+<td class="b1"><select name="country" class="form-control input-sm" id="country" {EN_COUNTRY}> {COUNTRYLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR48}</td>
+<td class="b1"><select name="state" class="form-control input-sm" id="state"  {EN_STATE}> {STATESLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR11}</td>
+<td class="b1"><input name="phone" type="text" class="form-control input-sm" id="phone" value="{PHONE}" maxlength="15" size="15" {EN_PHONE}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR12}</td>
+<td class="b1"><input name="mobile" type="text" class="form-control input-sm" id="mobile" value="{MOBILE}" maxlength="15" size="15" {EN_MOBILE}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR35}</td>
+<td class="b1"><input name="email" type="text" class="form-control input-sm" id="email" value="{EMAIL}" maxlength="100" size="50" {EN_EMAIL}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR13}</td>
+<td class="b1"><input name="taxid" type="text" class="form-control input-sm" id="taxid" value="{TAXID}" maxlength="40" size="40" {EN_TAXID}>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-md-6 col-sm-6">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{EDUSR14}</td>
+<td class="b1"><select name="srvid" class="form-control input-sm" id="srvid" {EN_SRVID}> {SRVLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="{BG_LIMITTRAFFICDL}">
+<tr>
+<td class="normal"> {EDUSR15} ({EDUSR39})</td>
+</tr>
+</table>
+</div>
+</td>
+<td class="b1"><input name="downlimit" type="text" class="form-control input-sm" id="downlimit" value="{DOWNLIMIT}" maxlength="25" size="20" {EN_DOWNLIMIT}>
+</td>
+</tr>
+<tr>
+<td class="td1">
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="{BG_LIMITTRAFFICUL}">
+<tr>
+<td class="normal"> {EDUSR16} ({EDUSR39})</td>
+</tr>
+</table>
+</div>
+</td>
+<td class="b1"><input name="uplimit" type="text" class="form-control input-sm" id="uplimit" value="{UPLIMIT}" maxlength="25" size="20" {EN_UPLIMIT}>
+</td>
+</tr>
+<tr>
+<td class="td1">
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="{BG_LIMITTRAFFICCOMB}">
+<tr>
+<td class="normal"> {EDUSR44} ({EDUSR39})</td>
+</tr>
+</table>
+</div>
+</td>
+<td class="b1"><input name="comblimit" type="text" class="form-control input-sm" id="comblimit" value="{COMBLIMIT}" maxlength="25" size="20" {EN_COMBLIMIT}>
+</td>
+</tr>
+<tr>
+<td class="td1">
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="{BG_LIMITEXPIRATION}">
+<tr>
+<td class="normal"> {EDUSR17}<br>({EDUSR40})</td>
+</tr>
+</table>
+</div>
+</td>
+<td class="b1"><input name="expiration" type="text" class="tgl form-control input-sm" data-date-format="yyyy-mm-dd" id="expiration" value="{EXPIRATION}" maxlength="19" size="19" {EN_EXPIRATION}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR18}<br>{EDUSR41}</td>
+<td class="b1"><input name="uptimelimit" type="text" class="form-control input-sm" id="timelimit" value="{UPTIMELIMIT}" maxlength="20" size="20" {EN_UPTIMELIMIT}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR19} ({CURRENCY})</td>
+<td class="b1"><input name="credits" type="text" class="form-control input-sm" id="credits" value="{CREDITS}" maxlength="20" size="20" {EN_CREDITS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR70}</td>
+<td class="b1"><input name="contractid" type="text" class="form-control input-sm" id="contractid" value="{CONTRACTID}" maxlength="50" size="50" {EN_CONTRACTID}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR89}<br>({EDUSR40})</td>
+<td class="b1"><input name="contractvalid" type="text" class="tgl form-control input-sm" data-date-format="yyyy-mm-dd" id="contractvalid" value="{CONTRACTVALID}" maxlength="19" size="19" {EN_CONTRACTVALID}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR82}</td>
+<td class="b1"><input name="gpslat" type="text" class="form-control input-sm" id="gpslat2" value="{GPSLAT}" maxlength="19" size="22" placeholder="{EDUSR83}">
+<input name="gpslong" type="text" class="form-control input-sm" id="gpslong" value="{GPSLONG}" maxlength="19" size="22" placeholder="{EDUSR83}">
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR21}</td>
+<td class="b1"><textarea name="comment" cols="55" rows="6" class="form-control input-sm" id="comment" onKeyDown="CountLeft(this, 500);" onKeyUp="CountLeft(this, 500);" >{COMMENT}</textarea>
+<SCRIPT LANGUAGE="JavaScript">
+function CountLeft(field, max)
+{
+if (field.value.length > max)
+field.value = field.value.substring(0, max);
+}
+</script>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR90}</td>
+<td class="b1"><select name="lang" class="form-control input-sm" id="lang"> {LANGLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR34}</td>
+<td class="b1"><select name="groupid" class="form-control input-sm" id="groupid" {EN_GROUP}> {GROUPLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR57}</td>
+<td class="b1"><select name="owner" class="form-control input-sm" id="owner" {EN_OWNER}> {OWNERSLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR71}</td>
+<td class="b1"><input name="pswactsmsnum" type="text" class="normal" id="pswactsmsnum" value="{PSWACTSMSNUM}" maxlength="5" size="5">
+{EDUSR49}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR56}</td>
+<td class="b1"><input name="verifysentnum" type="text" class="normal" id="verifysentnum" value="{VERIFYSENTNUM}" maxlength="5" size="5" {EN_VERIFYSENTNUM}>
+{EDUSR49}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR55}</td>
+<td class="b1"><input name="verifyfails" type="text" class="normal" id="verifyfails" value="{VERIFYFAILS}" maxlength="5" size="5" {EN_VERIFYFAILS}>
+{EDUSR49}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR20}</td>
+<td class="b1"><input name="cardfails" type="text" class="normal" id="cardfails" value="{CARDFAILS}" maxlength="5" size="5" {EN_CARDFAILS}>
+{EDUSR49}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR38}</td>
+<td class="b1"><textarea name="custattr" cols="30" rows="5" class="form-control input-sm" id="custattr" {EN_CUSTATTR}>{CUSTATTR}</textarea>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p align="center" class="normal"> <font color="#FF0000">*</font>
+{EDUSR42}</p>
+<p align="center" class="normal">
+<input class="btn btn-md btn-primary" type="submit" name="Submit" value="{EDUSR43}" {UPDATESTATE}>
+</p>
+</form>
+</div>
+<br>
+</div>
+
+<div class="col-md-4 col-sm-12">
+<div class="col-md-12 col-sm-6">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{EDUSR74}
+</div>
+<div class="panel-body">
+<table class="table table-striped table-condensed">
+<tbody>
+                          <SCRIPT LANGUAGE="JavaScript">
+function CountLeft(field, max)
+{
+  if (field.value.length > max)
+    field.value = field.value.substring(0, max);
+}
+ </script></td>
+<tr> 
+                                    <td nowrap class="normal"><div align="right">{EDUSR22}:</div></td>
+                                    <td nowrap class="normal"><strong id="theusername">{USERNAME}</strong></td>
+                                  </tr>						                                    <tr> 
+                                    <td nowrap class="normal"><div align="right">Password:</div></td>
+                                    <td nowrap class="normal"><div id="shownpwd">****
+									</div></td>
+                                  </tr>
+                                  <tr>
+<td class="td1">{EDUSR23}</td>
+<td class="b1"><strong>{STRACCTYPE}
+<input name="acctype" type="hidden" id="acctype" value="{ACCTYPE}">
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR24}</td>
+<td class="b1">
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="{BG_STATUS}">
+<tr>
+<td nowrap class="normal"><strong>{STATUS}</strong></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR28}</td>
+<td class="b1">
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="{BG_ONLINESTATUS}">
+<tr>
+<td nowrap class="normal"><strong>{ONLINESTAT}</strong></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR26}</td>
+<td class="b1">{CREATEDON}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR27}</td>
+<td class="b1">{CREATEDBY}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR53}</td>
+<td class="b1">{VERIFYCODE}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR58}</td>
+<td class="b1">{VERIFYMOBILE}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR29}</td>
+<td class="b1">{CURRIP}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR30}</td>
+<td class="b1">{LASTSEEN}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR51}</td>
+<td class="b1">{CALLERID}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR52}</td>
+<td class="b1">{NASNAME}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR25}</td>
+<td class="b1">{CARDSER}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR31}</td>
+<td class="b1">{SCHEDULEDATE}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR32}</td>
+<td class="b1">{NEWSRVNAME}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR91}</td>
+<td class="b1">{INVSTAT}
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="col-md-12 col-sm-6">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{EDUSR77}
+</div>
+<div class="panel-body">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{EDUSR78}</td>
+<td class="b1">{APNAME}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR79}</td>
+<td class="b1">{SIGNAL}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR80}</td>
+<td class="b1">{SNR}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR81}</td>
+<td class="b1">{CCQ}
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="col-md-12 col-sm-6">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{EDUSR75}
+</div>
+<div class="panel-body">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{EDUSR84}</td>
+<td class="b1">{CMTS}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR76}</td>
+<td class="b1">{UPSTREAM}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR65}</td>
+<td class="b1">{CMSNRDS}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR85}</td>
+<td class="b1">{CMSNRUS}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR66}</td>
+<td class="b1">
+<table border="0" cellpadding="0" cellspacing="0" class="normal" bgcolor="{BG_TXPWR}">
+<tr>
+<td>{CMTXPWR}</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR67}</td>
+<td class="b1">
+<table border="0" cellpadding="0" cellspacing="0" class="normal" bgcolor="{BG_RXPWR}">
+<tr>
+<td>{CMRXPWR}</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR68}</td>
+<td class="b1">{CMUPTIME}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR69}</td>
+<td class="b1">{CMPINGTIME}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR72}</td>
+<td class="b1">{CMCPEMAC}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSR73}</td>
+<td class="b1">{CMCPEIP}
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="text-center"><span class="btn btn-default btn-sm">{TRAFFICREPORT}</span> <span class="btn btn-default btn-sm">{LISTCONN}</span> <span class="btn btn-default btn-sm">{ADDCREDITS}</span>
+<span class="btn btn-default btn-sm">{ADDMONEY}</span> <span class="btn btn-default btn-sm">{POSTPAIDBILLING}</span> <span class="btn btn-default btn-sm">{LISTINVOICES}</span> <span class="btn btn-default btn-sm">{CHGSRV}</span> <span class="btn btn-default btn-sm">{LISTSRVHISTORY}</span>
+<span class="btn btn-default btn-sm">{AUTHLOG}</span> <span class="btn btn-default btn-sm">{DISCONN}</span> <span class="btn btn-default btn-sm">{DELUSER}</span></p>
+</div>
+
+<SCRIPT LANGUAGE="JavaScript" SRC="calendarpopup.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+var cal = new CalendarPopup("div1");
+document.write(getCalendarStyles());
+if (document.form1.acctype.value == 6)
+  setIPModeCM();
+setIPModeCPE();
+
+function setIPModeCM()
+{
+  var btn0 = document.form1.ipmodecm[0].checked;
+  var btn1 = document.form1.ipmodecm[1].checked;
+
+  if (btn0)
+  {
+    document.form1.staticipcm.disabled = true;
+    document.form1.poolidcm.disabled = false;
+  }
+  if (btn1)
+  {
+    document.form1.staticipcm.disabled = false;
+    document.form1.poolidcm.disabled = true;
+  }
+}
+
+function setIPModeCPE()
+{
+  var btn0 = document.form1.ipmodecpe[0].checked;
+  var btn1 = document.form1.ipmodecpe[1].checked;
+  var btn2 = document.form1.ipmodecpe[2].checked;
+
+  if (document.form1.ipmodecpe[0].disabled && document.form1.ipmodecpe[1].disabled && document.form1.ipmodecpe[2].disabled)
+  {
+    document.form1.staticipcpe.disabled = true;
+    document.form1.poolidcpe.disabled = true;
+  }
+  else
+  {
+    if (btn0)
+    {
+      document.form1.staticipcpe.disabled = true;
+      document.form1.poolidcpe.disabled = true;
+    }
+    if (btn1)
+    {
+      document.form1.staticipcpe.disabled = true;
+      document.form1.poolidcpe.disabled = false;
+    }
+    if (btn2)
+    {
+      document.form1.staticipcpe.disabled = false;
+      document.form1.poolidcpe.disabled = true;
+    }
+  }
+}
+
+</SCRIPT>
+                          </p>
+                          <DIV ID="div1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV></td>
+                      </tr>
+                    </table></td>
+                </tr>
+              

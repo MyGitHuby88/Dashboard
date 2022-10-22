@@ -1,0 +1,149 @@
+
+    <form name="form1" method="post" action="admin.php?cont=makecards">
+    <br>
+    <p class="text-center">
+    <input class="btn btn-primary btn-md" name="generate" type="submit" id="generate" value="{CFMCARDGEN14}">
+    <input name="quantity" type="hidden" id="quantity" value="{QUANTITY}">
+    <input name="secret" type="hidden" id="secret" value="{SECRET}">
+    <input name="value" type="hidden" id="value" value="{VALUE}">
+    <input name="expiration" type="hidden" id="expiration" value="{EXPIRATION}">
+    <input name="cardtype" type="hidden" id="cardtype" value="{CARDTYPE}">
+    <input name="groupid" type="hidden" id="groupid" value="{GROUPID}">
+    <input name="srvid" type="hidden" id="srvid" value="{SRVID}">
+    <input name="downlimit" type="hidden" id="downlimit" value="{DOWNLIMIT}">
+    <input name="uplimit" type="hidden" id="uplimit" value="{UPLIMIT}">
+    <input name="comblimit" type="hidden" id="comblimit" value="{COMBLIMIT}">
+    <input name="uptimelimit" type="hidden" id="uptimelimit" value="{UPTIMELIMIT}">
+    <input name="timebaseonline" type="hidden" id="timebaseonline" value="{TIMEBASEONLINE}">
+    <input name="transid" type="hidden" id="transid" value="{TRANSID}">
+    <input name="expiremode" type="hidden" id="expiremode" value="{EXPIREMODE}">
+    <input name="expiretime" type="hidden" id="expiretime" value="{EXPIRETIME}">
+    <input name="timebaseexp" type="hidden" id="timebaseexp" value="{TIMEBASEEXP}">
+    <input name="reqverify" type="hidden" id="reqverify" value="{REQVERIFY}">
+    <input name="pinlength" type="hidden" id="pinlength" value="{PINLENGTH}">
+    <input name="pswlength" type="hidden" id="pswlength" value="{PSWLENGTH}">
+    <input name="simuse" type="hidden" id="simuse" value="{SIMUSE}">
+    <input name="prefix" type="hidden" id="prefix" value="{PREFIX}">
+    </p>
+    </form>
+
+
+<!-- ------------------------------------ -->
+
+
+<div class="header">
+        <h4 class="title">{CFMCARDGEN0}</h4>
+        </div>
+        <div class="content">
+        <div class="col-md-12">
+        <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+        <div class="panel panel-primary ">
+        <div class="panel-body">
+    <!-- <form name="form1" method="post" action="admin.php?cont=makecards">
+            <div style="text-align: center;">
+                <input class="btn btn-primary btn-md" name="generate" type="submit" id="generate" value="{CFMCARDGEN14}">
+            </div> 
+    </form> -->
+            <br>
+        <form name="form1" method="post" action="admin.php?cont=makecards">
+        <p class="text-center"><img src="images/icon-exclamation.gif" width="51" height="72"></p><br>
+        <p class="text-center">{CFMCARDGEN1}<span style="color:#FF0000;"> {QUANTITY}</span> {CFMCARDGEN2}</p>
+        <br>
+        <p class="text-center">{CFMCARDGEN3}</p>
+        <table class="table table-striped table-condensed">
+        <tbody>
+        <tr>
+        <td class="td1">{CFMCARDGEN4}:</td>
+        <td class="b1"><strong>{STRCARDTYPE}</strong>
+        </td>
+        </tr>
+        <tr>
+        <td class="td1">{CFMCARDGEN5}:</td>
+        <td class="b1"><strong>{VALUE} {CURRENCY}</strong>
+        </td>
+        </tr>
+        <tr>
+        <td class="td1">{CFMCARDGEN6}:</td>
+        <td class="b1"><strong>{EXPIRATION}</strong>
+        </td>
+        </tr>
+        <tr>
+        <td class="td1">{CFMCARDGEN17}:</td>
+        <td class="b1"><strong>{STRGROUPNAME}</strong>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+        <br>
+        <p class="text-center">{CFMCARDGEN7}</p>
+        <table class="table table-striped table-condensed">
+        <tbody>
+        <tr>
+        <td class="td1">{CFMCARDGEN8}:</td>
+        <td class="b1"><strong>{STRSRVNAME}</strong>
+        </td>
+        </tr>
+        <tr>
+        <td class="td1">{CFMCARDGEN9}:</td>
+        <td class="b1"><strong>{STRDOWNLIMIT}</strong>
+        </td>
+        </tr>
+        <tr>
+        <td class="td1">{CFMCARDGEN10}:</td>
+        <td class="b1"><strong>{STRUPLIMIT}</strong>
+        </td>
+        </tr>
+        <tr>
+        <td class="td1">{CFMCARDGEN16}:</td>
+        <td class="b1"><strong>{STRCOMBLIMIT}</strong>
+        </td>
+        </tr>
+        <tr>
+        <td class="td1">{CFMCARDGEN11}:</td>
+        <td class="b1"><strong>{STRUPTIMELIMIT} </strong>
+        </td>
+        </tr>
+        <tr>
+        <td class="td1">{CFMCARDGEN12}:</td>
+        <td class="b1"><strong>{STREXPIREDATE}</strong>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+        <br>
+        <p class="text-center">{CFMCARDGEN13}</p><br><br>
+        <p class="text-center">
+        <input class="btn btn-primary btn-md" name="generate" type="submit" id="generate" value="{CFMCARDGEN14}">
+        <input name="quantity" type="hidden" id="quantity" value="{QUANTITY}">
+        <input name="secret" type="hidden" id="secret" value="{SECRET}">
+        <input name="value" type="hidden" id="value" value="{VALUE}">
+        <input name="expiration" type="hidden" id="expiration" value="{EXPIRATION}">
+        <input name="cardtype" type="hidden" id="cardtype" value="{CARDTYPE}">
+        <input name="groupid" type="hidden" id="groupid" value="{GROUPID}">
+        <input name="srvid" type="hidden" id="srvid" value="{SRVID}">
+        <input name="downlimit" type="hidden" id="downlimit" value="{DOWNLIMIT}">
+        <input name="uplimit" type="hidden" id="uplimit" value="{UPLIMIT}">
+        <input name="comblimit" type="hidden" id="comblimit" value="{COMBLIMIT}">
+        <input name="uptimelimit" type="hidden" id="uptimelimit" value="{UPTIMELIMIT}">
+        <input name="timebaseonline" type="hidden" id="timebaseonline" value="{TIMEBASEONLINE}">
+        <input name="transid" type="hidden" id="transid" value="{TRANSID}">
+        <input name="expiremode" type="hidden" id="expiremode" value="{EXPIREMODE}">
+        <input name="expiretime" type="hidden" id="expiretime" value="{EXPIRETIME}">
+        <input name="timebaseexp" type="hidden" id="timebaseexp" value="{TIMEBASEEXP}">
+        <input name="reqverify" type="hidden" id="reqverify" value="{REQVERIFY}">
+        <input name="pinlength" type="hidden" id="pinlength" value="{PINLENGTH}">
+        <input name="pswlength" type="hidden" id="pswlength" value="{PSWLENGTH}">
+        <input name="simuse" type="hidden" id="simuse" value="{SIMUSE}">
+        <input name="prefix" type="hidden" id="prefix" value="{PREFIX}">
+        </p>
+        <p class="text-center"><span style="color:#FF0000;">
+        {CFMCARDGEN15}
+        </span>
+        </p>
+        </form>
+        <br>
+        </div>
+        </div>
+        </div>
+        </div>
+</div>

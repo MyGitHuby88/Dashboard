@@ -1,0 +1,61 @@
+<div class="header">
+<h4 class="title">{CFMBATCHBILL0}</h4>
+</div>
+<div class="content">
+<div class="col-md-12">
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+<div class="panel panel-primary ">
+<div class="panel-heading text-center" style="font-size: 16px">{CFMBATCHBILL2}
+</div>
+<div class="panel-body">
+<form name="form1" action="admin.php?cont=do_batch_billing" method="post" onSubmit="return submitList()">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{CFMBATCHBILL4}</td>
+<td class="b1"><strong>{FROMDATE}
+<input name="fromdate" type="hidden" id="fromdate" value="{FROMDATE}">
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMBATCHBILL5}</td>
+<td class="b1"><strong>{TODATE}
+<input name="todate" type="hidden" id="todate" value="{TODATE}">
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMBATCHBILL7}</td>
+<td class="b1"><strong>{GROUPNAME}
+<input name="groupid" type="hidden" id="groupid" value="{GROUPID}">
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMBATCHBILL8}</td>
+<td class="b1"><strong>{STRINCZERO}
+<input name="inczero" type="hidden" id="inczero" value="{INCZERO}">
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{CFMBATCHBILL9}</td>
+<td class="b1"><strong>{STRINCDISACC}
+<input name="incdisacc" type="hidden" id="incdisacc" value="{INCDISACC}">
+</strong>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="text-center"><strong><span style="color: #FF0000">{CFMBATCHBILL3}</span></strong></p>
+<p class="text-center">
+<input class="btn btn-md btn-primary" type="submit" name="Submit" value="{CFMBATCHBILL1}">
+<input name="paymode" type="hidden" id="paymode" value="{PAYMODE}">
+</p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>

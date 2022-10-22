@@ -1,0 +1,136 @@
+<div class="header">
+<h4 class="title">{EDITIAS0}</h4>
+</div>
+<div class="content">
+<alert class="h4 text-danger">{ERROR}</alert>
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{NEWIAS0}
+</div>
+<div class="panel-body">
+<form action="admin.php?cont=update_ias" method="post" name="form1" id="form1">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {EDITIAS1}</td>
+<td class="b1"><input name="iasname" type="text" class="form-control input-sm" id="iasname" value="{IASNAME}" size="50" maxlength="50">
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITIAS2}</td>
+<td class="b1"><input name="enableias" type="checkbox" id="enableias" value="1" {CHECKEDENIAS}>
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {EDITIAS3} ({CURRENCY})</td>
+<td class="b1"><input name="price" type="text" class="form-control input-sm" id="price" value="{PRICE}" size="10" maxlength="10">
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITIAS4}</td>
+<td class="b1"><strong>
+<select name="srvid" class="form-control input-sm" id="select">{SRVLIST}
+</select>
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITIAS6}</td>
+<td class="b1"><input name="downlimit" type="text" class="normal" id="downlimit" value="{DOWNLIMIT}" maxlength="15" size="15">
+{EDITIAS13}<strong></strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITIAS7}</td>
+<td class="b1"><input name="uplimit" type="text" class="normal" id="uplimit" value="{UPLIMIT}" maxlength="15" size="15">
+{EDITIAS13}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITIAS8}</td>
+<td class="b1"><input name="totallimit" type="text" class="normal" id="totallimit" value="{TOTALLIMIT}" maxlength="15" size="15">
+{EDITIAS13}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITIAS5}</td>
+<td class="b1"><input name="validity" type="text" class="tgl form-control input-sm" data-date-format="yyyy-mm-dd" id="validity" value="{VALIDITY}" size="10" maxlength="10"> ({EDITIAS12})
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITIAS9}</td>
+<td class="b1"><input name="uptimelimit" type="text" class="normal" id="uptimelimit" value="{UPTIMELIMIT}" maxlength="15" size="15">
+<select name="timebaseonline" class="normal" id="timebaseonline">
+{TIMEBASELISTONLINE}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITIAS10}</td>
+<td class="b1">
+<input name="expiremode" type="radio" id="expiremode1" value="0" {CHECKEDFIXEDDATTE} onClick="setNDays()">
+{EDITIAS15}<br>
+<input type="radio" name="expiremode" id="expiremode2" value="1" {CHECKEDNDAYS} onClick="setNDays()">
+{EDITIAS16}<br>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITIAS11}</td>
+<td class="b1"><input name="expiretime" type="text" class="normal" id="expiretime" value="{EXPIRETIME}" maxlength="15" size="15">
+<select name="timebaseexp" class="normal" id="timebaseexp">
+{TIMEBASELISTEXP}
+</select> <strong></strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITIAS20}</td>
+<td class="b1"><input name="simuse" type="text" class="normal" id="simuse" value="{SIMUSE}" maxlength="15" size="15">
+</td>
+</tr>
+</tbody>
+</table>
+<p align="center" class="normal"> <font color="#FF0000">*</font> {EDITIAS17}</p>
+<p align="center" class="normal">
+<input class="btn btn-md btn-primary" type="submit" name="Submit" value="{EDITIAS18}">
+<input name="iasid" type="hidden" id="iasid" value="{IASID}">
+<SCRIPT type=text/javascript><!--
+focusField("iasname");
+setNDays();
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+function setNDays()
+{
+var btn1 = document.form1.expiremode[0].checked;
+if (btn1)
+{
+document.form1.validity.disabled = false;
+document.form1.expiretime.disabled = true;
+document.form1.timebaseexp.disabled = true;
+}
+else
+{
+document.form1.validity.disabled = true;
+document.form1.expiretime.disabled = false;
+document.form1.timebaseexp.disabled = false;
+}
+}
+//--> </SCRIPT>
+</p>
+</form>
+<p align="center" class="normal">[<a href="admin.php?cont=confirm_del_ias&iasid={IASID}&iasname={IASNAME}">{EDITIAS19}</a>]</p>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$(function () {
+$('.tgl').datepicker();
+});
+</script>

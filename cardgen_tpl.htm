@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Alazhry-Css/scss-addcard/style1.css">
+</head>
+<body>
+    <h1 class="p1">انشاء الكروت </h1>
+    <div>
+        <form action="admin.php?cont=confirm_makecards" method="post" name="form1" id="form1">
+        <p class="title2">{ERROR}</p>
+    </div>
+    <br><br><br>
+    <section>
+      <div class="m7">
+        <p>مجموعة المشتركين </p>
+        <select name="groupid" class="normal" id="groupid">{GROUPLIST}</select>
+      </div>
+      <div class="m8">
+        <p>البرفيل </p>
+        <strong><select name="srvid" class="normal" id="srvid">{SRVLIST}</select></strong>
+      </div>
+      <div class="m5">
+        <p> طول رقم الكارت</p>
+        <select name="pinlength" class="normal" id="pinlength">{PINLIST}</select> 
+      </div>
+      <div class="m6">
+          <p>طول كلمة السر </p>
+          <select name="pswlength" class="normal" id="pswlength">{PSWLIST}</select> 
+      </div>
+      <div class="m10">
+        <p>Contact</p>
+        <input name="simuse" type="text" class="normal" id="simuse" value="5">
+      </div>
+      <div class="m3">
+        <p>تاريخ الانتهاء </p>
+        <input name="expiration" type="text" class="normal" id="expiration" value="2030-1-1" >
+      </div>
+      <div class="m1">
+          <p>الكميه</p>
+          <input name="quantity" type="text" class="normal" id="quantity" value="{QUANTITY}">
+      </div>
+      <div class="m2">
+          <p>السعر</p>
+          <input name="value" type="text"  value="5">
+      </div>
+      <div class="m4">
+          <p>st</p>
+          <input name="prefix" type="text" class="normal" id="prefix" value="{PREFIX}"> 
+      </div>
+      <div class="m9">
+          <p>MB</p>
+          <input name="comblimit" type="text" class="normal" id="comblimit" value="">
+      </div>
+      <div class="m11">
+          <p> انتهاء</p>
+          <input name="expiremode" type="radio" id="expiremode1" value="0" {CHECKEDFIXEDDATTE} onClick="setNDays()">
+          حتي تاريخ الصلاحيه المحدده
+      </div>
+      <div class="m12">
+          <p> نوع الكروت</p>
+          <input name="cardtype" type="radio" value="0" {CHECKEDUNREG} onClick="setCardType()">
+          الكروت المدفوعة مسبقا
+      </div>
+    </section>
+
+
+
+
+
+    <br><br><br><br>
+    <div class="sav1">
+        <input class="sav" type="submit" name="Submit" value="{CARDGEN13}">
+        <input name="taxpercent" type="hidden" id="taxpercent" value="{TAXPERCENT}">
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <tr> 
+        <td nowrap class="normal">
+            <SCRIPT LANGUAGE="JavaScript" SRC="calendarpopup.js"></SCRIPT> 
+            <SCRIPT LANGUAGE="JavaScript">
+                var cal = new CalendarPopup("div1");
+                document.write(getCalendarStyles());
+                focusField("fromdate");
+                function focusField(name) {
+                    for(var i = 0; i < document.forms.length; ++i) {
+                        var obj = document.forms[i].elements[name];
+                        if (obj) {
+                        if (obj.length) { obj = obj[0]; }
+                        if (obj.focus) { obj.focus(); }
+                        }
+                    }
+                    } 
+            </SCRIPT>
+        </td>
+    </tr>
+      <!-- ****************** End Page  ********************** -->
+    
+            
+    
+          <SCRIPT type=text/javascript><!--
+                            
+                  focusField("quantity");
+                  setCardType();
+                  setNDays();
+    
+                  function focusField(name) {
+                    for(var i = 0; i < document.forms.length; ++i) {
+                      var obj = document.forms[i].elements[name];
+                      if (obj) {
+                        if (obj.length) { obj = obj[0]; }
+                        if (obj.focus) { obj.focus(); }
+                      }
+                    }
+                  } 
+    
+                  function setCardType()
+                  {
+                    var btn1 = document.form1.cardtype[0].checked;
+                    
+                    if (btn1)
+                    {
+                      document.form1.srvid.disabled = false;
+                      document.form1.downlimit.disabled = false;
+                      document.form1.uplimit.disabled = false;
+                      document.form1.comblimit.disabled = false;
+                      document.form1.uptimelimit.disabled = false;
+                      document.form1.timebaseonline.disabled = false;
+                      document.form1.expiremode1.disabled = false;
+                      document.form1.expiremode2.disabled = false;
+                      document.form1.reqverify.disabled = false;
+                      document.form1.pswlength.disabled = false;
+                      document.form1.simuse.disabled = false;
+    
+                      if (document.form1.expiremode[1].checked)
+                      {
+                        document.form1.expiretime.disabled = false;
+                        document.form1.timebaseexp.disabled = false;
+                      }
+                    }
+                    else
+                    {
+                      document.form1.srvid.disabled = true;
+                      document.form1.downlimit.disabled = true;
+                      document.form1.uplimit.disabled = true;
+                      document.form1.comblimit.disabled = true;
+                      document.form1.uptimelimit.disabled = true;
+                      document.form1.timebaseonline.disabled = true;
+                      document.form1.expiremode1.disabled = true;
+                      document.form1.expiremode2.disabled = true;
+                      document.form1.expiretime.disabled = true;
+                      document.form1.timebaseexp.disabled = true;
+                      document.form1.reqverify.disabled = true;
+                      document.form1.pswlength.disabled = true;
+                      document.form1.simuse.disabled = true;
+                    }
+                  }
+    
+                  function setNDays()
+                  {
+                    var btn1 = document.form1.expiremode[0].checked;
+                    
+                    if (btn1)
+                    {
+                      document.form1.expiretime.disabled = true;
+                      document.form1.timebaseexp.disabled = true;		
+                    }
+                    else
+                      if (document.form1.cardtype[0].checked)
+                      {
+                        document.form1.expiretime.disabled = false;
+                        document.form1.timebaseexp.disabled = false;
+                      }
+                  }
+                  //--> </SCRIPT>
+                  <script language="JavaScript" src="helper.js" type="text/JavaScript">
+          </script>
+    
+</body>
+</html>

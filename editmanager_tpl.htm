@@ -1,0 +1,389 @@
+<div class="header">
+<h4 class="title">{EDITMGR0}</h4>
+</div>
+<div class="content">
+<alert class="h4 text-danger">{ERROR}</alert>
+<div class="col-md-12">
+<div class="row">
+<form name="form1" action="admin.php?cont=update_manager&managername={MANAGERNAME}" method="post">
+<div class="col-md-6 col-sm-6">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{EDITMGR49}
+</div>
+<div class="panel-body">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{EDITMGR2}</td>
+<td class="b1"><input name="enablemanager" type="checkbox" id="enablemanager" value="1" {CHECKEDENMANAGER}>
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span>{EDITMGR1}</td>
+<td class="b1"><strong>{MANAGERNAME}</strong>
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span>{EDITMGR3}<br>{EDITMGR12}</td>
+<td class="b1"><input name="password1" type="password" class="form-control input-sm" id="password1" value="{PASSWORD1}" maxlength="32" size="18" {EN_PSW1}>
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span>{EDITMGR4}<br>{EDITMGR12}</td>
+<td class="b1"><input name="password2" type="password" class="form-control input-sm" id="password2" value="{PASSWORD2}" maxlength="32" size="18" {EN_PSW2}>
+<input name="changepsw" type="checkbox" id="changepsw" value="1" onClick="setPswFields()" {EN_CHANGEPSW} {CHKCHANGEPSW}>
+{EDITMGR50}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR5}</td>
+<td class="b1"><input name="firstname" type="text" class="form-control input-sm" id="firstname" value="{FIRSTNAME}" maxlength="50" size="50">
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR47}</td>
+<td class="b1"><input name="lastname" type="text" class="form-control input-sm" id="lastname" value="{LASTNAME}" maxlength="50" size="50">
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR56}</td>
+<td class="b1"><input name="company" type="text" class="form-control input-sm" id="company" value="{COMPANY}" maxlength="50" size="50" {EN_COMPANY}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR8}</td>
+<td class="b1"><input name="address" type="text" class="form-control input-sm" id="address" value="{ADDRESS}" maxlength="50" size="50">
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR9}</td>
+<td class="b1"><input name="city" type="text" class="form-control input-sm" id="city" value="{CITY}" maxlength="50" size="50">
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR10}</td>
+<td class="b1"><input name="zip" type="text" class="form-control input-sm" id="zip" value="{ZIP}" maxlength="8" size="8">
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR58}</td>
+<td class="b1"><strong>
+<select name="country" class="form-control input-sm" id="country" {EN_COUNTRY}> {COUNTRYLIST}
+</select>
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR59}</td>
+<td class="b1"><select name="state" class="form-control input-sm" id="state"  {EN_STATE}> {STATESLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR6}</td>
+<td class="b1"><input name="phone" type="text" class="form-control input-sm" id="phone" value="{PHONE}" maxlength="15" size="15">
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR7}</td>
+<td class="b1"><input name="mobile" type="text" class="form-control input-sm" id="mobile" value="{MOBILE}" maxlength="15" size="15">
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR21}</td>
+<td class="b1"><input name="email" type="text" class="form-control input-sm" id="email" value="{EMAIL}" maxlength="50" size="50" {EN_EMAIL}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR57}</td>
+<td class="b1"><input name="vatid" type="text" class="form-control input-sm" id="vatid" value="{VATID}" maxlength="40" size="40" {EN_TAXID}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR66}</td>
+<td class="b1"><strong>
+<select name="lang" class="form-control input-sm" id="lang"> {LANGLIST}
+</select>
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR11}</td>
+<td class="b1"><input name="comment" type="text" class="form-control input-sm" id="comment" value="{COMMENT}" maxlength="200" size="50">
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-6">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{EDITMGR13}
+</div>
+<div class="panel-body">
+<div class="col-md-12 col-sm-12">
+<div class="row">
+<div class="col-md-6 col-sm-6">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{EDITMGR14}</td>
+<td class="b1"><input name="perm_listusers" type="checkbox" id="perm_listusers" value="1" {CHECKEDLISTUSERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR23}</td>
+<td class="b1"><input name="perm_listmanagers" type="checkbox" id="perm_listmanagers" value="1" {CHECKEDLISTMANAGERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR32}</td>
+<td class="b1"><input name="perm_listservices" type="checkbox" id="perm_listservices" value="1" {CHECKEDLISTSERVICES}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR15}</td>
+<td class="b1"><input name="perm_createusers" type="checkbox" id="perm_createusers" value="1" {CHECKEDCREATEUSERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR24}</td>
+<td class="b1"><input name="perm_createmanagers" type="checkbox" id="perm_createmanagers" value="1" {CHECKEDCREATEMANAGERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR33}</td>
+<td class="b1"><input name="perm_createservices" type="checkbox" id="perm_createservices" value="1" {CHECKEDCREATESERVICES}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR16}</td>
+<td class="b1"><input name="perm_editusers" type="checkbox" id="perm_editusers" value="1" {CHECKEDEDITUSERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR25}</td>
+<td class="b1"><input name="perm_editmanagers" type="checkbox" id="perm_editmanagers" value="1" {CHECKEDEDITMANAGERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR34}</td>
+<td class="b1"><input name="perm_editservices" type="checkbox" id="perm_editservices" value="1" {CHECKEDEDITSERVICES}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR61}</td>
+<td class="b1"><input name="perm_edituserspriv" type="checkbox" id="perm_edituserspriv" value="1" {CHECKEDEDITUSERSPRIV}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR26}</td>
+<td class="b1"><input name="perm_deletemanagers" type="checkbox" id="perm_deletemanagers" value="1" {CHECKEDDELETEMANAGERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR35}</td>
+<td class="b1"><input name="perm_deleteservices" type="checkbox" id="perm_deleteservices" value="1" {CHECKEDDELETESERVICES}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR17}</td>
+<td class="b1"><input name="perm_deleteusers" type="checkbox" id="perm_deleteusers" value="1" {CHECKEDDELETEUSERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR29}</td>
+<td class="b1"><input name="perm_addcredits" type="checkbox" id="perm_addcredits" value="1" {CHECKEDADDCREDITS}>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-md-6 col-sm-6">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{EDITMGR18}</td>
+<td class="b1"><input name="perm_listinvoices" type="checkbox" id="perm_listinvoices" value="1" {CHECKEDLISTINVOICES}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR48}</td>
+<td class="b1"><input name="perm_allusers" type="checkbox" id="perm_allusers" value="1" {CHECKEDALLUSERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR22}</td>
+<td class="b1"><input name="perm_negbalance" type="checkbox" id="perm_negbalance" value="1" {CHECKEDNEGBALANCE}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR19}</td>
+<td class="b1"><input name="perm_listallinvoices" type="checkbox" id="perm_listallinvoices" value="1" {CHECKEDLISTALLINVOICES}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR27}</td>
+<td class="b1"><input name="perm_listonlineusers" type="checkbox" id="perm_listonlineusers" value="1" {CHECKEDLISTONLINEUSERS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR60}</td>
+<td class="b1"><input name="perm_allowdiscount" type="checkbox" id="perm_allowdiscount" value="1" {CHECKEDALLOWDISCOUNT}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR65}</td>
+<td class="b1"><input name="perm_showinvtotals" type="checkbox" id="perm_showinvtotals" value="1" {CHKSHOWINVTOTALS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR28}</td>
+<td class="b1"><input name="perm_logout" type="checkbox" id="perm_logout" value="1" {CHECKEDLOGOUT}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR62}</td>
+<td class="b1"><input name="perm_enwriteoff" type="checkbox" id="perm_enwriteoff" value="1" {CHECKEDENWRITEOFF}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR20}</td>
+<td class="b1"><input name="perm_editinvoice" type="checkbox" id="perm_editinvoice" value="1" {CHECKEDEDITINVOICE}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR31}</td>
+<td class="b1"><input name="perm_cardsys" type="checkbox" id="perm_cardsys" value="1" {CHECKEDCARDSYS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR64}</td>
+<td class="b1"><input name="perm_cts" type="checkbox" id="perm_cts" value="1" {CHKCTS}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR30}</td>
+<td class="b1"><input name="perm_trafficreport" type="checkbox" id="perm_trafficreport" value="1" {CHECKEDTRAFFICREPORT}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR63}</td>
+<td class="b1"><input name="perm_accessap" type="checkbox" id="perm_accessap" value="1" {CHKACCESSAP}>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p align="center">
+<input class="btn btn-sm btn-default" name="checkall" type="button" class="normal" id="checkall" value="{EDITMGR36}" onClick="checkAllCheckboxes(true)">
+<input class="btn btn-sm btn-default" name="clearall" type="button" class="normal" id="clearall" value="{EDITMGR37}" onClick="checkAllCheckboxes(false)">
+</p>
+</div>
+</div>
+</div>
+</div>
+<p class="text-center"> <span style="color:#FF0000;">*</span> {EDITMGR38}</p>
+<p align="center" class="normal">
+<input class="btn btn-md btn-primary" type="submit" name="Submit" value="{EDITMGR39}">
+<script language="JavaScript" type="text/JavaScript">
+function setPswFields()
+{
+var btn1 = document.form1.changepsw.checked;
+if (btn1)
+{
+document.form1.password1.disabled = false;
+document.form1.password2.disabled = false;
+document.form1.password1.value = "";
+document.form1.password2.value = "";
+focusField("password1");
+}
+else
+{
+document.form1.password1.disabled = true;
+document.form1.password2.disabled = true;
+document.form1.password1.value = "**********************";
+document.form1.password2.value = "**********************";
+}
+}
+function checkAllCheckboxes(flag)
+{
+for (var i = 0; i < form1.elements.length;i++)
+{
+var cb = form1.elements[i];
+if (cb.type=='checkbox' && cb.name.substr(0, 4) == 'perm')
+cb.checked = flag;
+}
+}
+</script>
+</p>
+</form>
+<hr>
+<div class="col-md-6 col-md-offset-3">
+<form name="form2" method="post" action="admin.php?cont=add_credits_mgr&managername={MANAGERNAME}" onSubmit="return ConfirmMsg('{EDITMGR46}')">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{EDITMGR40}
+</div>
+<div class="panel-body">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{EDITMGR41}</td>
+<td class="b1">{BALANCE} {CURRENCY}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR42} ({CURRENCY})</td>
+<td class="b1"><input name="amount" type="text" class="form-control input-sm" id="amount" value="0" size="20" maxlength="20">
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR52}</td>
+<td class="b1"><input name="descr" type="text" class="form-control input-sm" id="descr" value="{DESCR}" size="60" maxlength="60">
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITMGR53}</td>
+<td class="b1"><p>
+<strong>
+<input name="paymode" type="radio" value="0" checked>
+</strong>
+<strong>{EDITMGR54}<br>
+<input type="radio" name="paymode" value="1">
+{EDITMGR55}
+<br>
+</strong> </p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="text-center">
+<input class="btn btn-md btn-primary" name="Pay" type="submit" id="Pay" value="{EDITMGR43}">
+<SCRIPT type=text/javascript><!--
+focusField("payment");
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+//--> </SCRIPT>
+<input name="transid" type="hidden" id="transid" value="{TRANSID}">
+<input name="managername" type="hidden" id="managername" value="{MANAGERNAME}">
+<script language="JavaScript" src="helper.js" type="text/JavaScript">
+</script>
+</p>
+</form>
+<p align="center" class="normal"> [<a href="admin.php?cont=list_invoices&issuedby={MANAGERNAME}&invgroup=-1&paymode=-1">{EDITMGR44}</a>]
+[<a href="admin.php?cont=confirm_del_manager&managername={MANAGERNAME}">{EDITMGR45}</a>]</p>
+</div>
+</div>
+</div>
+</div>
+</div>

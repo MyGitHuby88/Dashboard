@@ -1,0 +1,81 @@
+<div class="header">
+<h4 class="title">{BUYSRV0}</h4>
+</div>
+<div class="content">
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{BUYSRV0}
+</div>
+<div class="panel-body">
+<form name="form1" action="user.php?cont=select_paymode" method="post" >
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{BUYSRV1}</td>
+<td class="b1"><strong>{PROFNAME}</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{BUYSRV2}</td>
+<td class="b1"><strong>{TRAFFICUNITDL} MB</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{BUYSRV8}</td>
+<td class="b1"><strong>{TRAFFICUNITUL} MB</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{BUYSRV9}</td>
+<td class="b1"><strong>{TRAFFICUNITCOMB} MB</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{BUYSRV3}</td>
+<td class="b1"><strong>{TIMEUNITEXP} {TIMEBASEEXP}</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{BUYSRV10}</td>
+<td class="b1"><strong>{TIMEUNITONLINE} {TIMEBASEONLINE}</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{BUYSRV4}</td>
+<td class="b1"><strong>{UNITPRICESTR} {CURRENCY} </strong><strong>
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {BUYSRV5}</td>
+<td class="b1"><strong>
+<input name="amount" type="text" class="form-control input-sm" id="amount" value="{AMOUNT}" maxlength="10" size="10">
+</strong>
+</td>
+</tr>
+</table>
+<p align="center" class="normal"><strong><font color="#FF0000">{ADDMODESTR}</font></strong></p>
+<p align="center" class="normal"><font color="#FF0000">*</font>
+{BUYSRV6}</p>
+<p align="center" class="normal">
+<input class="btn btn-md btn-primary" type="submit" name="Submit" value="{BUYSRV7}">
+<SCRIPT type=text/javascript><!--
+focusField("amount");
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+//--> </SCRIPT>
+</p>
+</form>
+<center><alert class="h4 text-danger">{ERROR}</alert></center>
+</div>
+</div>
+</div>
+</div>
+</div>

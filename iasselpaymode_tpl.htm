@@ -1,0 +1,76 @@
+<div class="header">
+<h4 class="title">{IASSPM0}</h4>
+</div>
+<div class="content">
+<center><alert class="h4 text-danger">{ERROR}</alert></center>
+<div class="col-md-12">
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+<div class="panel panel-primary ">
+<div class="panel-body">
+<br>
+<p class="text-center">
+{IASSPM1}:
+</p>
+<form name="form1" action="payias.php?cont=make_payment" method="post" >
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{IASSPM2}:</td>
+<td class="b1"><strong>{IASNAME}
+<input name="iasid" type="hidden" id="iasid" value="{IASID}">
+</strong>
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{IASSPM3}:</td>
+<td class="b1"><strong>{PRICE} {CURRENCY}</strong>
+</td>
+</tr>
+<tr>
+<td class="td1"><font color="#FF0000">{STAREMAIL}</font>
+{IASSPM8}:</td>
+<td class="b1"><input name="email" class="form-control input-sm" type="text" class="normal" id="email" value="{EMAIL}" size="40" maxlength="50">
+</td>
+</tr>
+<tr>
+<td class="td1"><font color="#FF0000">{STARMOBILE}</font>
+{IASSPM9}:</td>
+<td class="b1"><input name="mobile" type="text" class="normal" id="mobile" value="{MOBILE}" size="15" maxlength="15">
+({IASSPM10}) <script language="JavaScript" type="text/JavaScript">
+focusField("email");
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+</script>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<font color="#FF0000">*</font> {IASSPM11}
+</p>
+<br>
+<p class="text-center">{IASSPM4}
+</p>
+<br>
+<p class="text-center">{PAYMODES}
+</p>
+<p class="text-center">
+<input class="btn btn-primary btn-md" type="submit" name="Submit" value="{IASSPM7}">
+<script language="JavaScript" src="helper.js" type="text/JavaScript">
+</script>
+</p>
+</form>
+<br>
+</div>
+</div>
+</div>
+</div>
+</div>

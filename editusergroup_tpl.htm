@@ -1,0 +1,56 @@
+<div class="header">
+<h4 class="title">{EDUSRGRP0}</h4>
+</div>
+<div class="content">
+<alert class="h4 text-danger">{ERROR}</alert>
+<div class="col-md-12">
+<div class="col-sm-6 col-sm-offset-3">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{EDUSRGRP0}
+</div>
+<div class="panel-body">
+<form action="admin.php?cont=update_usergroup&id={ID}" method="post" name="form1" id="form1">
+<table class="table table-condensed">
+<tbody>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {EDUSRGRP1}</td>
+<td class="b1"><input name="name" type="text" class="form-control input-sm" id="name" value="{NAME}" size="32" maxlength="32">
+<SCRIPT type=text/javascript><!--
+focusField("name");
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+//--> </SCRIPT>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDUSRGRP2}</td>
+<td class="b1"><textarea name="descr" cols="60" rows="5" class="form-control input-sm" id="descr" onKeyDown="CountLeft(this, 200);" onKeyUp="CountLeft(this, 200);" >{DESCR}</textarea>
+<SCRIPT LANGUAGE="JavaScript">
+function CountLeft(field, max)
+{
+if (field.value.length > max)
+field.value = field.value.substring(0, max);
+}
+</script>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="text-center"><span style="color:#FF0000">*</span> {EDUSRGRP3}</p>
+<p class="text-center">
+<input class=" btn btn-md btn-primary" type="submit" name="Submit" value="{EDUSRGRP4}">
+</p>
+</form>
+</div>
+</div>
+<p class="text-center">[<a href="admin.php?cont=confirm_del_usergroup&id={ID}&name={NAME}">{EDUSRGRP5}</a>]</p>
+</div>
+</div>
+</div>

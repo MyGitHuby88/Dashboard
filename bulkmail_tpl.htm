@@ -1,0 +1,57 @@
+<div class="header">
+<h4 class="title">{BULKMAIL0}</h4>
+</div>
+<div class="content">
+<div class="">
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+<div class="panel panel-primary">
+<div class="panel-heading" style="font-size: 16px">{BULKMAIL0}
+</div>
+<div class="panel-body">
+<form name="form1" method="post" action="admin.php?cont=sendbulkmail">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{BULKMAIL1}</td>
+<td class="b1"><select name="groupid" class="form-control input-sm" id="groupid">
+{GROUPLIST}
+</select>
+</td>
+</tr>
+<tr>
+<td class="td1">{BULKMAIL2}</td>
+<td class="b1"><input name="subject" type="text" class="form-control input-sm" id="subject" size="80" maxlength="255">
+</td>
+</tr>
+<tr>
+<td class="td1">{BULKMAIL3}</td>
+<td class="b1"><p>
+<textarea name="body" cols="80" rows="8" class="form-control input-sm" id="body"></textarea>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="text-center">{BULKMAIL4}</p>
+<p align="center"><br>
+<SCRIPT type=text/javascript><!--
+focusField("subject");
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+//--> </SCRIPT>
+<input class="btn btn-sm btn-primary" name="Submit" type="submit" class="normal" value="{BULKMAIL5}">
+<br>
+</p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,37 @@
+<div class="header">
+<h4 class="title">{LSTCARDSER0}</h4>
+</div>
+<div class="content">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{QUICKJUMP}
+</div>
+<div class="content table-responsive">
+<form name="form1" method="post" action="admin.php?cont=list_series_action">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td> <table cellSpacing=1 cellPadding=1
+width="100%" border=0
+valign="top">
+</table>
+{CARDSERIES}</td>
+</tr>
+</table>
+</div>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="normal"><strong>  &nbsp;&nbsp; {LSTCARDSER13}:
+<select name="action" class="" id="action" onchange="Confirm()">
+<option></option>
+<option value="0">{LSTCARDSER17}</option>
+<option value="1">{LSTCARDSER18}</option>
+<option value="2">{LSTCARDSER19}</option>
+</select>
+</strong><strong><font color="{COL_ACTIVE}">*{LSTCARDSER14}</font> &nbsp; <font color="{COL_REVOKED}">*{LSTCARDSER15}</font> &nbsp; <font color="{COL_PARTIAL}">*{LSTCARDSER16}</font></strong></td>
+</tr>
+</table>
+</form>
+<div class="panel-footer">{QUICKJUMP}</div>
+</div>
+</div>
+<script language="JavaScript" src="helper.js" type="text/JavaScript">
+</script>

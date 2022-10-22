@@ -1,0 +1,55 @@
+<div class="header">
+<h4 class="title">{PAYSAGEPAY0}</h4>
+</div>
+<div class="content">
+<div class="col-md-12">
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+<div class="panel panel-primary ">
+<div class="panel-body">
+<br>
+<form method="POST" action="https://paynow.sagepay.co.za/site/paynow.aspx">
+<p class="text-center">
+{PAYSAGEPAY1}
+<br>
+<input type="hidden" name="m1" value="{SRVKEY}">
+<input type="hidden" name="m2" value="24ade73c-98cf-47b3-99be-cc7b867b3080">
+<input type="hidden" name="p2" value="{SERIAL}">
+<input type="hidden" name="p3" value="{DESCR}">
+<input type="hidden" name="p4" value="{PRICE}">
+<input type="hidden" name="Budget" value="Y">
+<input type="hidden" name="m4" value="na">
+<input type="hidden" name="m5" value="na">
+<input type="hidden" name="m6" value="na">
+<input type="hidden" name="m9" value="{EMAIL}">
+<input type="hidden" name="m10" value="">
+</p>
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1">{PAYSAGEPAY2}:</td>
+<td class="b1"><strong>{PRODNAME}</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{PAYSAGEPAY3}:</td>
+<td class="b1"><strong>{QTY}</strong>
+</td>
+</tr>
+<tr>
+<td class="td1">{PAYSAGEPAY4}:</td>
+<td class="b1"><strong>{STRPRICE} {CURRENCY} </strong>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p class="text-center">
+<input class="btn btn-primary btn-md" type="submit" name="Submit" value="{PAYSAGEPAY5}">
+</p>
+</form>
+<br>
+</div>
+</div>
+</div>
+</div>
+</div>

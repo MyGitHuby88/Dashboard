@@ -1,0 +1,42 @@
+<div class="header">
+<h4 class="title">{ENTCRDNUM0}</h4>
+</div>
+<div class="content">
+<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{ENTCRDNUM0}
+</div>
+<div class="panel-body">
+<form name="form1" action="user.php?cont=store_cardnum" method="post">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {ENTCRDNUM1}</td>
+<td class="b1"><input name="cardnum" type="text" class="form-control input-sm" id="cardnum" size="20" maxlength="20">
+</td>
+</tr>
+</table>
+<p align="center" class="normal"><br><font color="#FF0000">*</font>
+{ENTCRDNUM2}</p>
+<p align="center" class="normal">
+<input class=" btn btn-md btn-primary" name="entercard" type="submit" id="entercard" value="{ENTCRDNUM3}">
+<SCRIPT type=text/javascript><!--
+focusField("cardnum");
+function focusField(name) {
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+//--> </SCRIPT>
+</p>
+</form>
+<center><alert class="h4 text-danger">{ERROR}</alert></center>
+</div>
+</div>
+</div>
+</div>
+</div>

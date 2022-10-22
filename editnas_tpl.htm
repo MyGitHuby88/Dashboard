@@ -1,0 +1,182 @@
+<div class="header">
+<h4 class="title">{EDITNAS0}</h4>
+</div>
+<div class="content">
+<alert class="h4 text-danger">{ERROR}</alert>
+<div class="col-md-12">
+<div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+<div class="panel panel-primary ">
+<div class="panel-heading" style="font-size: 16px">{NEWNAS0}
+</div>
+<div class="panel-body">
+<form action="admin.php?cont=update_nas" method="post" name="form1" id="form1">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {EDITNAS1}</td>
+<td class="b1"><input name="name" type="text" class="form-control input-sm" id="name" value="{NAME}" size="32" maxlength="32">
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {EDITNAS2}</td>
+<td class="b1"><input name="nasip" type="text" class="form-control input-sm" id="nasip" value="{NASIP}" size="15" maxlength="15">
+<input name="oldnasip" type="hidden" id="oldnasip" value="{OLDNASIP}">
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {EDITNAS3}</td>
+<td class="b1"><strong>
+<select name="type" class="form-control input-sm" id="type" onChange="enablePassword()"> {NASTYPELIST}
+</select>
+</strong>
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {EDITNAS4}</td>
+<td class="b1"><input name="secret" type="text" class="form-control input-sm" id="secret" value="{SECRET}" size="30" maxlength="60">
+<font color="#666666"><em>({EDITNAS10})</em></font>
+</td>
+</tr>
+<tr>
+<td class="td1"><span style="color:#FF0000">*</span> {EDITNAS9}</td>
+<td class="b1"><input name="password" type="text" class="form-control input-sm" id="password" value="{PASSWORD}" size="30" maxlength="60">
+<font color="#666666"><em>({EDITNAS11})</em></font>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITNAS19}</td>
+<td class="b1"><input name="enableapi" type="checkbox" id="enableapi" value="1" {CHKENABLEAPI}>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITNAS16}</td>
+<td class="b1"><input name="apiusername" type="text" class="form-control input-sm" id="apiusername" value="{APIUSERNAME}" size="30" maxlength="60">
+<font color="#666666"><em>({EDITNAS18})</em></font>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITNAS17}</td>
+<td class="b1"><input name="apipassword" type="password" class="form-control input-sm" id="apipassword" value="{APIPASSWORD}" size="30" maxlength="60">
+<font color="#666666"><em>({EDITNAS18})</em></font>
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITNAS12}</td>
+<td class="b1"><input type="radio" name="ciscobwmode" value="0" {CHECKEDCISCOBWMODENONE}>
+{EDITNAS13}<br> <input type="radio" name="ciscobwmode" value="1" {CHECKEDCISCOBWMODERATELIMIT}>
+{EDITNAS14}<br> <input type="radio" name="ciscobwmode" value="2" {CHECKEDCISCOBWMODEPOLICYMAP}>
+{EDITNAS15}
+</td>
+</tr>
+<tr>
+<td class="td1">{EDITNAS5}</td>
+<td class="b1"><input name="descr" type="text" class="form-control input-sm" id="descr" value="{DESCR}" size="80" maxlength="200">
+</td>
+</tr>
+</tbody>
+</table>
+<p class="text-center"><span style="color:#FF0000">*</span> {EDITNAS6}</p>
+<p class="text-center">
+<input class="btn btn-md btn-primary" type="submit" name="Submit" value="{EDITNAS7}">
+<SCRIPT type=text/javascript><!--
+focusField("name");
+enablePassword();
+function focusField(name)
+{
+for(var i = 0; i < document.forms.length; ++i) {
+var obj = document.forms[i].elements[name];
+if (obj) {
+if (obj.length) { obj = obj[0]; }
+if (obj.focus) { obj.focus(); }
+}
+}
+}
+function checkAllCheckboxes(flag)
+{
+for (var i = 0; i < form1.elements.length;i++)
+{
+var e = form1.elements[i];
+if ( e.type=='checkbox' )
+e.checked = flag;
+}
+}
+function enablePassword()
+{
+var nasType = document.form1.type[document.form1.type.selectedIndex].value;
+if  (nasType == 0) // mikrotik
+{
+document.form1.secret.disabled = false;
+document.form1.password.disabled = true;
+document.form1.apipassword.disabled = false;
+document.form1.apiusername.disabled = false;
+document.form1.enableapi.disabled = false;
+document.form1.ciscobwmode[0].disabled = true;
+document.form1.ciscobwmode[1].disabled = true;
+document.form1.ciscobwmode[2].disabled = true;
+}
+else if (nasType == 1) // staros
+{
+document.form1.secret.disabled = false;
+document.form1.password.disabled = false;
+document.form1.apipassword.disabled = true;
+document.form1.apiusername.disabled = true;
+document.form1.enableapi.disabled = true;
+document.form1.ciscobwmode[0].disabled = true;
+document.form1.ciscobwmode[1].disabled = true;
+document.form1.ciscobwmode[2].disabled = true;
+}
+else if (nasType == 2) // chillispot
+{
+document.form1.secret.disabled = false;
+document.form1.password.disabled = true;
+document.form1.apipassword.disabled = true;
+document.form1.apiusername.disabled = true;
+document.form1.enableapi.disabled = true;
+document.form1.ciscobwmode[0].disabled = true;
+document.form1.ciscobwmode[1].disabled = true;
+document.form1.ciscobwmode[2].disabled = true;
+}
+else if (nasType == 3) // cisco
+{
+document.form1.secret.disabled = false;
+document.form1.password.disabled = true;
+document.form1.apipassword.disabled = true;
+document.form1.apiusername.disabled = true;
+document.form1.enableapi.disabled = true;
+document.form1.ciscobwmode[0].disabled = false;
+document.form1.ciscobwmode[1].disabled = false;
+document.form1.ciscobwmode[2].disabled = false;
+}
+else if (nasType == 4) // pfSense
+{
+document.form1.secret.disabled = false;
+document.form1.password.disabled = true;
+document.form1.apipassword.disabled = true;
+document.form1.apiusername.disabled = true;
+document.form1.enableapi.disabled = true;
+document.form1.ciscobwmode[0].disabled = true;
+document.form1.ciscobwmode[1].disabled = true;
+document.form1.ciscobwmode[2].disabled = true;
+}
+else // other
+{
+document.form1.secret.disabled = false;
+document.form1.password.disabled = true;
+document.form1.apipassword.disabled = true;
+document.form1.apiusername.disabled = true;
+document.form1.enableapi.disabled = true;
+document.form1.ciscobwmode[0].disabled = true;
+document.form1.ciscobwmode[1].disabled = true;
+document.form1.ciscobwmode[2].disabled = true;
+}
+}
+//--> </SCRIPT>
+<input name="id" type="hidden" id="id" value="{ID}">
+</p>
+</form>
+</div>
+</div>
+<p align="center" class="normal">[<a href="admin.php?cont=confirm_del_nas&id={ID}&name={NAME}">{EDITNAS8}</a>]</p>
+</div>
+</div>
+</div>
